@@ -167,12 +167,18 @@
       "nome": "Admin",
       "email": "admin@hotmail.com",
       "senha": "12345678"
+    },
+    {
+      "nome": "Isaque",
+      "email": "isaquenovo127@gmail.com",
+      "senha": "1233213213",
+      "id": 2
     }
   ],
   "pedidos": [
     {
       "id": 1,
-      "valortotal": 100.0,
+      "valortotal": 100,
       "idUsuario": 1,
       "itens": [
         {
