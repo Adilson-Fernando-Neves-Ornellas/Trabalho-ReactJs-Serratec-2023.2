@@ -1,10 +1,13 @@
+import CardProduto from "../../components/CardProduto";
+import { useState } from "react"
+
 const Produtos = () => {  
 
-    return (
-      <>  
-        Pagina Produtos
-      </>
-    );
-  };
+  return(
+    <>
+    <CardProduto />
+    </>
+)
+}
   
   export default Produtos;
