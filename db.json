@@ -1,0 +1,184 @@
+{
+  "produtos": [
+    {
+      "id": 1,
+      "nome": "Notebook HP 15.6\"",
+      "preco": 1499.99,
+      "quantidade": 25,
+      "descricao": "Notebook HP com tela de 15.6 polegadas, processador Intel Core i5 e 8GB de RAM.",
+      "imgurl": "https://example.com/notebook_hp.jpg"
+    },
+    {
+      "id": 2,
+      "nome": "Monitor Dell 27\"",
+      "preco": 299.99,
+      "quantidade": 50,
+      "descricao": "Monitor Dell de 27 polegadas com resolução Full HD e conexões HDMI e DisplayPort.",
+      "imgurl": "https://example.com/monitor_dell.jpg"
+    },
+    {
+      "id": 3,
+      "nome": "Teclado Mecânico RGB",
+      "preco": 79.99,
+      "quantidade": 100,
+      "descricao": "Teclado mecânico com iluminação RGB e switches Cherry MX.",
+      "imgurl": "https://example.com/teclado_rgb.jpg"
+    },
+    {
+      "id": 4,
+      "nome": "Mouse Gamer",
+      "preco": 39.99,
+      "quantidade": 75,
+      "descricao": "Mouse gamer com sensor de alta precisão e 6 botões programáveis.",
+      "imgurl": "https://example.com/mouse_gamer.jpg"
+    },
+    {
+      "id": 5,
+      "nome": "Impressora Laser HP",
+      "preco": 199.99,
+      "quantidade": 30,
+      "descricao": "Impressora laser HP de alta velocidade para impressões de alta qualidade.",
+      "imgurl": "https://example.com/impressora_hp.jpg"
+    },
+    {
+      "id": 6,
+      "nome": "Roteador Wi-Fi Dual-Band",
+      "preco": 59.99,
+      "quantidade": 60,
+      "descricao": "Roteador Wi-Fi com suporte a redes de 2.4GHz e 5GHz para alta velocidade.",
+      "imgurl": "https://example.com/roteador_wifi.jpg"
+    },
+    {
+      "id": 7,
+      "nome": "Fone de Ouvido Bluetooth",
+      "preco": 29.99,
+      "quantidade": 80,
+      "descricao": "Fone de ouvido Bluetooth com cancelamento de ruído e bateria de longa duração.",
+      "imgurl": "https://example.com/fone_bluetooth.jpg"
+    },
+    {
+      "id": 8,
+      "nome": "Câmera de Segurança IP",
+      "preco": 69.99,
+      "quantidade": 40,
+      "descricao": "Câmera de segurança IP para monitoramento em tempo real com resolução HD.",
+      "imgurl": "https://example.com/camera_ip.jpg"
+    },
+    {
+      "id": 9,
+      "nome": "SSD Kingston 1TB",
+      "preco": 99.99,
+      "quantidade": 70,
+      "descricao": "SSD Kingston de 1TB para maior velocidade e capacidade de armazenamento.",
+      "imgurl": "https://example.com/ssd_kingston.jpg"
+    },
+    {
+      "id": 10,
+      "nome": "Mochila para Notebook",
+      "preco": 19.99,
+      "quantidade": 120,
+      "descricao": "Mochila resistente para notebook de até 15 polegadas com compartimentos extras.",
+      "imgurl": "https://example.com/mochila_notebook.jpg"
+    },
+    {
+      "id": 11,
+      "nome": "Cadeira Gamer",
+      "preco": 149.99,
+      "quantidade": 35,
+      "descricao": "Cadeira gamer ergonômica com apoio lombar e ajuste de altura.",
+      "imgurl": "https://example.com/cadeira_gamer.jpg"
+    },
+    {
+      "id": 12,
+      "nome": "Hub USB 3.0",
+      "preco": 14.99,
+      "quantidade": 90,
+      "descricao": "Hub USB 3.0 com 4 portas para expansão de conectividade.",
+      "imgurl": "https://example.com/hub_usb.jpg"
+    },
+    {
+      "id": 13,
+      "nome": "Webcam Full HD",
+      "preco": 49.99,
+      "quantidade": 55,
+      "descricao": "Webcam Full HD com microfone integrado para videoconferências nítidas.",
+      "imgurl": "https://example.com/webcam_hd.jpg"
+    },
+    {
+      "id": 14,
+      "nome": "Caixa de Som Bluetooth",
+      "preco": 34.99,
+      "quantidade": 85,
+      "descricao": "Caixa de som Bluetooth portátil com áudio de alta qualidade.",
+      "imgurl": "https://example.com/caixa_som.jpg"
+    },
+    {
+      "id": 15,
+      "nome": "Placa de Vídeo NVIDIA",
+      "preco": 299.99,
+      "quantidade": 20,
+      "descricao": "Placa de vídeo NVIDIA com suporte a jogos em alta resolução e ray tracing.",
+      "imgurl": "https://example.com/placa_video.jpg"
+    },
+    {
+      "id": 16,
+      "nome": "Pen Drive 64GB",
+      "preco": 9.99,
+      "quantidade": 150,
+      "descricao": "Pen drive de 64GB com design compacto e alta capacidade de armazenamento.",
+      "imgurl": "https://example.com/pen_drive.jpg"
+    },
+    {
+      "id": 17,
+      "nome": "Rato Ergonómico",
+      "preco": 24.99,
+      "quantidade": 70,
+      "descricao": "Rato ergonómico com suporte para pulso e alta precisão de movimento.",
+      "imgurl": "https://example.com/rato_ergonomico.jpg"
+    },
+    {
+      "id": 18,
+      "nome": "Teclado Sem Fio",
+      "preco": 29.99,
+      "quantidade": 80,
+      "descricao": "Teclado sem fio compacto e de baixo perfil para maior comodidade.",
+      "imgurl": "https://example.com/teclado_sem_fio.jpg"
+    },
+    {
+      "id": 19,
+      "nome": "Placa-Mãe ASUS",
+      "preco": 129.99,
+      "quantidade": 25,
+      "descricao": "Placa-mãe ASUS de alta qualidade com suporte a processadores Intel e AMD.",
+      "imgurl": "https://example.com/placa_mae.jpg"
+    },
+    {
+      "id": 20,
+      "nome": "Roteador Mesh",
+      "preco": 89.99,
+      "quantidade": 40,
+      "descricao": "Sistema de roteador Mesh para cobertura Wi-Fi em toda a casa.",
+      "imgurl": "https://example.com/roteador_mesh.jpg"
+    }
+  ],
+  "usuarios": [
+    {
+      "id": 1,
+      "nome": "Admin",
+      "email": "admin@hotmail.com",
+      "senha": "12345678"
+    }
+  ],
+  "pedidos": [
+    {
+      "id": 1,
+      "valortotal": 100.0,
+      "idUsuario": 1,
+      "itens": [
+        {
+          "Id": 1
+        }
+      ]
+    }
+  ]
+}

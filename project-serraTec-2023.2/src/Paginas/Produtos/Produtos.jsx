@@ -1,13 +1,40 @@
-import CardProduto from "../../components/CardProduto";
+import CardProduto from "../../components/CardProdutos/CardProduto";
+import { useState, useEffect } from "react";
+import { api } from "../../api/api"
+import NavBar from "../../components/NavBar";
+import './Produtos.css'
 
-const Produtos = () => {  
+const Produtos = () => {
+  const [listaProduto, setListaProduto] = useState([]);
 
-  return(
+  useEffect(() => {
+    getProdutos();
+  }, []);
+
+  const getProdutos = async () => {
+    const response = await api.get("/produtos");
+    setListaProduto(response.data);
+  };
+
+  return (
     <>
-    <CardProduto />
+      <NavBar/>
+      <div className="conteinerCard">
+        {listaProduto.map((produto) => (
+          <CardProduto
+            key={produto.id}
+            id={produto.id}
+            nome={produto.nome}
+            preco={produto.preco}
+            quantidade={produto.quantidade}
+            descricao={produto.descricao}
+            imgurl={produto.imgurl}
+            getProdutos={getProdutos}
+          />
+        ))}
+      </div>
     </>
-)
-}
+  );
+};
 
-  
- export default Produtos;
+export default Produtos;

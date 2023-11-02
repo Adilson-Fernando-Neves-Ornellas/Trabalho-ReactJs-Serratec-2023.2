@@ -1,0 +1,18 @@
+.card{
+    width: 19%;
+}
+@media (max-width: 1440px) {
+    .card{
+        width: 19%;
+    }
+}
+@media (max-width: 1024px) {
+    .card{
+      width: 32.129%;
+    }
+}
+@media (max-width: 580px) {
+    .card{
+      width: 48.214286%;
+    }
+}
