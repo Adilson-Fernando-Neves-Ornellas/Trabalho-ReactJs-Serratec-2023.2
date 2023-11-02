@@ -6,7 +6,7 @@ import ProdutoEspecifico from '../Paginas/ProdutoEspecifico/ProdutoEspecifico';
 import PedidosPorId from '../Paginas/PedidosPorId/PedidosPorId';
 
 const Rotas = createBrowserRouter([
-    {path: "/", element: <Produtos />},
+    {path: "/Produto", element: <Produtos />},
     {path: "/produto/:id", element: <ProdutoEspecifico /> },
     {path: "/cadastro", element: <Cadastro />}, //opcional
     {path: "/login", element: <Login /> },

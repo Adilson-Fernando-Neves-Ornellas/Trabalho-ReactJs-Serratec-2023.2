@@ -1,10 +1,13 @@
+import CardProduto from "../../components/CardProduto";
+
 const Produtos = () => {  
 
-    return (
-      <>  
-      
-      </>
-    );
-  };
+  return(
+    <>
+    <CardProduto />
+    </>
+)
+}
+
   
-  export default Produtos;
+ export default Produtos;
