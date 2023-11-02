@@ -3,6 +3,7 @@ import {
     RouterProvider,
 } from "react-router-dom";
 import Rotas from './Rotas/Rotas'
+import "./main.css"
 
 
 ReactDOM.createRoot(document.getElementById('root')).render(
