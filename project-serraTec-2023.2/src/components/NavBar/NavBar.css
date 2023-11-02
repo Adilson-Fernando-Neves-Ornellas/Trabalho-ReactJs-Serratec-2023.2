@@ -1,0 +1,84 @@
+.navBarContainer{
+    padding: 10px;
+    background-color: #05132E;
+    color: white;
+}
+.containerMenuNavBar{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 10px;
+    color: white;
+}
+.mensagemBoasVindas{
+    text-align: center;
+}
+@media (max-width: 1024px) {
+    .conteinerInput{
+        display: none;
+    }
+}
+.imputBusca{
+    border-radius: 8px;
+    padding: 8px;
+    width: 140%;
+}
+.containerLoginEcarrinho{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+.linkLogin{
+    list-style: none;
+    color: white;
+    font-style: normal;
+    text-decoration: none;
+}
+.buttoncarrinho{
+    border: 0;
+    background-color: rgba(255, 255, 255);
+    color: white; 
+    width: 100%;
+    height: 100%;
+    border-radius: 8px;
+}
+.imgcarrinho {
+    width: 100%;
+    height: 100%;
+    background-color: rgba(255, 255, 255, 0); 
+    border: 0;
+    padding: 5px;
+    border-radius: 8px;
+  }
+.carrinhoFechado{
+    display: none;
+}
+.carrinhoAberto{
+    position: absolute;
+    background-color: #05132E;
+    top: 0%;
+    left: 50%;
+    right: 0;
+    height: 100%;
+    display: flex;
+    justify-content: space-around;
+    padding-left: 15px;
+    padding-right: 15px;
+    align-items: baseline;
+}
+.tituloCarrinho{
+    color: white;
+    margin: 0;
+    margin-top: 10px; 
+}
+.buttonfechar{
+    background-color: white;
+    border: 0;
+    border-radius: 25%;
+    width: 10%;
+    height: 7.56%;
+    color: black;
+    margin: 0;
+    padding: 0;
+    margin-top: 10px;
+}
