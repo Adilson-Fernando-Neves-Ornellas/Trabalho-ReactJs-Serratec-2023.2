@@ -1,6 +1,6 @@
 import "./NavBar.css"
 import imgcarrinho from '../../imagens/imgcarrinho.svg'
-
+import Header from "../header/header";
 const NavBar = () => {
 
 
@@ -22,7 +22,7 @@ const NavBar = () => {
               </a>
           </div>
           </div>
-            <h1 className='mensagemBoasVindas'>Loja de Informatica</h1>
+          <Header/>
         </div>
       </>
     );

@@ -1,0 +1,21 @@
+.conteinerbuttonLogin{
+    display: flex;
+    gap: 20px;
+}
+.tituloFormLogin{
+    text-align: center;
+}
+.buttonFormLogin{
+    width: 100%;
+}
+.containeFormLogin{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+
+}
+.formLogin{
+    width: 80%;
+}
