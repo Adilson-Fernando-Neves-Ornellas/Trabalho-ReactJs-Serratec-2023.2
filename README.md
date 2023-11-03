@@ -51,7 +51,7 @@ Especificações
           compra.
           ○ Após os passos acima redirecionar para a tela de Pedidos realizados, onde
           conterá uma listagem de todos os pedidos feitos por aquele usuário.      
-Extras:
+Extras
 
     ● Tela de Cadastro de Usuário, com os campos:
         ○ Nome completo
@@ -64,7 +64,7 @@ Extras:
     ● Ao finalizar a compra a mesma deverá ser registrada via API na rota de
     pedidos.
     
-Regras:
+Regras
 
     ● Não será permitido utilizar Tailwindcss e Bootstrap.
     ● Qualquer biblioteca de componentes pode ser utilizada.
