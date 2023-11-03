@@ -5,11 +5,11 @@ Desenvolvimento WEB
 SERRATEC
 
 ## Participantes
-- Adilson Fernando
-- Day
-- Filipi Cardoso
-- Isaque Perez Rodrigues
-- Taynara
+- ADILSON FERNANDO NEVES ORNELLAS
+- DAYANE MAFORT THULLER
+- FILIPI CARDOSO DA ROCHA
+- ISAQUE PEREZ RODRIGUES
+- TAYNARA AGUIAR REBELLO
 
 
 Visão geral
@@ -32,7 +32,7 @@ Objetivos
       ○ Nesta tela deverá ser possível filtrar um produto pelo nome do mesmo.
       ○ Não deverão ser exibidos os produtos sem quantidade em estoque.
       
-    ● Tela de informação sobre um produto específico.
+    ● Tela de informação sobre um produto específico:
       ○ Nesta tela, o produto será descrito por completo.
       
     ● Tela ou Modal para Carrinho:
@@ -42,15 +42,15 @@ Objetivos
       ○ O carrinho deve ser acessível de
       
     ● Caso o usuário queira comprar, o mesmo poderá acessar o carrinho onde irá
-    finalizar a compra.
+    finalizar a compra:
       ○ Por termos a limitação da API, ao finalizar a compra, deverá ser realizada
       requisição para diminuir a quantidade de produtos logo após a finalização da
       compra.
       ○ Após os passos acima redirecionar para a tela de Pedidos realizados, onde
-      conterá uma listagem de todos os pedidos feitos por aquele usuário.
-      
+      conterá uma listagem de todos os pedidos feitos por aquele usuário.      
 Extras:
-    ●Tela de Cadastro de Usuário, com os campos:
+
+    ● Tela de Cadastro de Usuário, com os campos:
         ○ Nome completo
         ○ Email
         ○ Senha
@@ -60,7 +60,9 @@ Extras:
     nota dada por outros usuários.
     ● Ao finalizar a compra a mesma deverá ser registrada via API na rota de
     pedidos.
+    
 Regras:
+
     ● Não será permitido utilizar Tailwindcss e Bootstrap.
     ● Qualquer biblioteca de componentes pode ser utilizada.
     ● Para gerenciamento de estados, apenas o Context API poderá ser utilizado. Libs
