@@ -20,19 +20,19 @@ const ProdutoEspecifico = () => {
     return (
       <>
         <NavBar/>
-        <div className="conteinerPaginaProdEspecifico">
-            <div className="conteinerImgProdEspecifico">
+        <div className="containerPaginaProdEspecifico">
+            <div className="containerImgProdEspecifico">
                 <img className="imgProd" src={produto.imgurl} alt="Imagem do Produto" />
             </div>
-            <div className="conteinerInfoProd">
-              <h2 className="nomeprod">{produto.nome}</h2>
+            <div className="containerInfoProd">
+              <h2 className="nomeProd">{produto.nome}</h2>
               <h1 className="preçoProd">R$:{produto.preco}</h1>
               <h3 className="qtdProd">Quantidade disponivel Restante: {produto.quantidade}</h3>
               <button className="buttonCompra">Comprar</button>
             </div>
         </div>
-        <div className="conteinerDesscricao">
-          <p className="tituloConteinerDescricao">Descrição do Produto:</p>
+        <div className="containerDescricao">
+          <p className="tituloContainerDescricao">Descrição do Produto:</p>
           <p className="descricao">{produto.descricao}</p>
         </div>
       </>

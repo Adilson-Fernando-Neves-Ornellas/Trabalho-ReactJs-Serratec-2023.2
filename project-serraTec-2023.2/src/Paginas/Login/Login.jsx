@@ -106,7 +106,7 @@ const Login = () => {
               />
             </Form.Group>
 
-            <div className="conteinerbuttonLogin">
+            <div className="containerButtonLogin">
               <Button
                 className="buttonFormLogin"
                 variant="primary"

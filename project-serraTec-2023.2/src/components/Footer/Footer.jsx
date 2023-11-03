@@ -22,7 +22,7 @@ const Footer = () => {
             <a target="_blank" className= "linkContatos" href="https://github.com/Adilson-Fernando-Neves-Ornellas/Trabalho-ReactJs-Serratec-2023.2"> GitHub </a>
             <a target="_blank" className= "linkContatos" href="https://www.linkedin.com/in/adilson-fernando-neves-ornellas-42b594237/"> LinkedIn Adilson</a>
             <a target="_blank" className= "linkContatos" href="https://www.linkedin.com/in/dayane-thuller-496903ba/"> LinkedIn Dayane</a>
-            <a target="_blank" className= "linkContatos" href="https://www.linkedin.com/"> LinkedIn Filipi</a>
+            <a target="_blank" className= "linkContatos" href="https://www.linkedin.com/in/filipi-cardoso-23b928190//"> LinkedIn Filipi</a>
             <a target="_blank" className= "linkContatos" href="https://www.linkedin.com/in/isaque-perez-39a5ba295/"> LinkedIn Isaque</a>
             <a target="_blank" className= "linkContatos" href="https://www.linkedin.com/in/taynara-aguiar/"> LinkedIn Taynara</a>
 

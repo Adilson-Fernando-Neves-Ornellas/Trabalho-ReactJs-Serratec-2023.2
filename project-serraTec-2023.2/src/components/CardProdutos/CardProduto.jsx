@@ -10,7 +10,7 @@ const CardProduto = ({id,nome,preco,quantidade,descricao,imgurl}) => {
   }
     return (
     <div className="card" key={id}>
-      <div className='conteinerImgProd'>
+      <div className='containerImgProd'>
         <img className="imgcard" src={imgurl} />
       </div>
       <div className='containerInfoProd'>

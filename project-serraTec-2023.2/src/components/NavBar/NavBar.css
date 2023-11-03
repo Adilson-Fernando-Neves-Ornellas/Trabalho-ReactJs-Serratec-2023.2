@@ -14,11 +14,11 @@
     text-align: center;
 }
 @media (max-width: 1024px) {
-    .conteinerInput{
+    .containerInput{
         display: none;
     }
 }
-.imputBusca{
+.inputBuscar{
     border-radius: 8px;
     padding: 8px;
     width: 140%;
