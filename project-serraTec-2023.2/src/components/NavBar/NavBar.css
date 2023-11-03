@@ -82,3 +82,11 @@
     padding: 0;
     margin-top: 10px;
 }
+.pesquisar{
+    background-color: #05132E;
+    list-style: none;
+    color: white;
+    font-style: normal;
+    text-decoration: none;
+    border-radius: 5px;
+}

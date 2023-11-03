@@ -1,19 +1,21 @@
 import "./NavBar.css";
 import imgcarrinho from "../../imagens/imgcarrinho.svg";
 import Header from "../header/header";
-import { useAuth } from "../../Contexto/Context";
+import { useGeral } from "../../Contexto/Context";
 import { useState } from "react";
 
 const NavBar = () => {
-  const { isLoggedIn, email } = useAuth();
-  const [busca, setBusca] = useState();
-  const [listaFilter, setListaFilter] = useState();
-  const {listaProduto} = useAuth()
+  const { isLoggedIn, email, setListaProduto, listaProduto} = useGeral();
+  const [busca, setBusca] = useState("");
 
-  const buscarProd = (e) =>{    
+  const buscarProd = (e) =>{
     e.preventDefault();
-    setListaFilter(listaProduto.filter((prod) => { prod.nome === busca }))
-    console.log(listaFilter)
+    setListaProduto(listaProduto.filter((prod) => prod.nome === busca))
+      if(busca === ""){
+        alert("Informe um produto!")
+      }else{
+        alert("Produto não encontrado!")
+      }
   }
 
   return (
@@ -23,15 +25,13 @@ const NavBar = () => {
           <h1 className="tituloEcommerce">Grupo02</h1>
           <div className="conteinerInput">
             <input
-            value={busca}
-              onChange={(string) => {
-                setBusca(string.target.value);
-              }}
+              value={busca}
+              onChange={(string) => {setBusca(string.target.value);}}
               className="imputBusca"
               type="text"
               placeholder="O que você está procurando?"
-              onClick={buscarProd}
             />
+            <button className="pesquisar" onClick={buscarProd}>Pesquisar</button>
           </div>
           <div className="containerLoginEcarrinho">
             <a className="linkLogin" href = { isLoggedIn ?  "/pedidos/"+email : "/Login"}>

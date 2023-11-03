@@ -33,6 +33,6 @@ AuthProvider.propTypes = {
   children: PropTypes.node, // Adicione esta linha para validar 'children'
 };
 
-export const useAuth = () => {
+export const useGeral = () => {
   return useContext(AuthContext);
 };

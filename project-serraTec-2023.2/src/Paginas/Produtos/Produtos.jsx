@@ -3,12 +3,12 @@ import { useState, useEffect } from "react";
 import { api } from "../../api/api";
 import NavBar from "../../components/NavBar/NavBar";
 import "./Produtos.css";
-import { useAuth } from "../../Contexto/Context";
+import { useGeral } from "../../Contexto/Context";
 import Footer from "../../components/Footer/Footer";
 
 const Produtos = () => {
 
-  const {listaProduto, setListaProduto} = useAuth()
+  const {listaProduto, setListaProduto} = useGeral()
 
   useEffect(() => {
     getProdutos();

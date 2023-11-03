@@ -6,7 +6,7 @@ import "bootstrap/dist/css/bootstrap.min.css";
 import Header from "../../components/header/header";
 import { useNavigate } from "react-router";
 import "./Login.css";
-import { useAuth } from "../../Contexto/Context";
+import { useGeral } from "../../Contexto/Context";
 
 const Login = () => {
   const navigate = useNavigate();
@@ -14,7 +14,7 @@ const Login = () => {
   const [senha, setSenha] = useState("");
   const [gravarSenha, setGravarSenha] = useState(false);
   const [usuario, setUsuario] = useState([]);
-  const { login, isLoggedIn } = useAuth();
+  const { login, isLoggedIn } = useGeral();
 
   const irParaMeusPedidos= () =>{
     navigate("/pedidos/" + email);
