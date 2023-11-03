@@ -1,0 +1,27 @@
+.footer {
+    height: 300px;
+    background-color: #05132E;
+    padding: 30px;
+}
+
+.copyrightText {
+    text-align: center;
+    color: white;
+}
+
+.conteinerLinks {
+    display: flex;
+    justify-content: space-around;
+    color: white;
+}
+.cardInfo {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    
+}
+
+.linkContatos {
+    text-decoration: none;
+    color: white;
+}

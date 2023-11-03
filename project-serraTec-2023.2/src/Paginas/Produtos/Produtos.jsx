@@ -4,6 +4,7 @@ import { api } from "../../api/api";
 import NavBar from "../../components/NavBar/NavBar";
 import "./Produtos.css";
 import { useAuth } from "../../Contexto/Context";
+import Footer from "../../components/Footer/Footer";
 
 const Produtos = () => {
 
@@ -35,6 +36,7 @@ const Produtos = () => {
           />
         ))}
       </div>
+      <Footer/>
     </>
   );
 };
