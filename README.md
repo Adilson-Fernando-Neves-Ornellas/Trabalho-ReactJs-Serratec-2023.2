@@ -23,19 +23,24 @@ Objetivos
   Especificações
   Para a execução do projeto é necessário deixar as seguintes considerações e regras do que
   tem que ser feito:
+
     - Tela de Login, solicitando: ✔️
       - Email
       - Senha
+      
     - Tela de Listagem de Produtos:
       - Nesta tela deverá ser possível filtrar um produto pelo nome do mesmo.
       - Não deverão ser exibidos os produtos sem quantidade em estoque.
+      
     - Tela de informação sobre um produto específico.
       - Nesta tela, o produto será descrito por completo.
+      
     - Tela ou Modal para Carrinho:
       - Qualquer produto poderá ser adicionado no carrinho.
       - O usuário escolherá a quantidade e incluirá no carrinho.
       - Opção para esvaziar o carrinho.
       - O carrinho deve ser acessível de
+      
     - Caso o usuário queira comprar, o mesmo poderá acessar o carrinho onde irá
     finalizar a compra.
       - Por termos a limitação da API, ao finalizar a compra, deverá ser realizada
