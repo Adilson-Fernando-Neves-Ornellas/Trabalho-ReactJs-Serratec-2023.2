@@ -1,5 +1,5 @@
 import CardProduto from "../../components/CardProdutos/CardProduto";
-import { useState, useEffect } from "react";
+import {useEffect } from "react";
 import { api } from "../../api/api";
 import NavBar from "../../components/NavBar/NavBar";
 import "./Produtos.css";

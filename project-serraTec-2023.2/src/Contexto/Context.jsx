@@ -8,6 +8,7 @@ export const AuthProvider = ({ children }) => {
   const [isLoggedIn, setIsLoggedIn] = useState(false);
   const [idUsuario, setidusuario] = useState(''); 
   const [listaProduto, setListaProduto] = useState([]);
+  const [listaCarrinho, setListaCarrinho] = useState([]);
 
   const login = (userData,idUsuario) => {
     setUser(userData);
@@ -20,10 +21,8 @@ export const AuthProvider = ({ children }) => {
     setIsLoggedIn(false); // Define o estado de login como false
   };
 
-  // Resto do seu código permanece inalterado
-
   return (
-    <AuthContext.Provider value={{ user, login, logout, isLoggedIn, idUsuario, listaProduto , setListaProduto}}>
+    <AuthContext.Provider value={{ user, login, logout, isLoggedIn, idUsuario, listaProduto , setListaProduto, listaCarrinho, setListaCarrinho}}>
       {children}
     </AuthContext.Provider>
   );

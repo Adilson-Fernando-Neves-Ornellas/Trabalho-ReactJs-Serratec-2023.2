@@ -47,6 +47,7 @@ const Login = () => {
     setEmail("");
     setSenha("");
   };
+
   const statusGravarSenha = () => {
     if (gravarSenha === false) {
       const modeloLocalStorage = {
@@ -60,6 +61,10 @@ const Login = () => {
     }
     setGravarSenha(!gravarSenha);
   };
+
+  useEffect(() => {
+    
+  }, []);
 
   return (
     <>
