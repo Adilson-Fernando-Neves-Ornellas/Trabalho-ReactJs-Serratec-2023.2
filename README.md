@@ -26,7 +26,6 @@ Objetivos
     - Tela de Login, solicitando: ✔️
       - Email
       - Senha
-        
     - Tela de Listagem de Produtos:
       - Nesta tela deverá ser possível filtrar um produto pelo nome do mesmo.
       - Não deverão ser exibidos os produtos sem quantidade em estoque.
