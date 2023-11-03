@@ -21,13 +21,13 @@ const NavBar = () => {
       <div className="navBarContainer">
         <div className="containerMenuNavBar">
           <h1 className="tituloEcommerce">Grupo02</h1>
-          <div className="conteinerInput">
+          <div className="containerInput">
             <input
             value={busca}
               onChange={(string) => {
                 setBusca(string.target.value);
               }}
-              className="imputBusca"
+              className="inputBuscar"
               type="text"
               placeholder="O que você está procurando?"
               onClick={buscarProd}

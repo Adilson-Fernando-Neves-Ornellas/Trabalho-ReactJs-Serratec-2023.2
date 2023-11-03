@@ -22,7 +22,7 @@ const Produtos = () => {
   return (
     <>
       <NavBar />
-      <div className="conteinerCard">
+      <div className="containerCard">
         {listaProduto.map((produto) => (
           <CardProduto
             key={produto.id}
