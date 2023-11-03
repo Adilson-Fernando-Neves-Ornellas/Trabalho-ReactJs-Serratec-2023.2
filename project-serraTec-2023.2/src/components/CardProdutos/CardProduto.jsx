@@ -16,7 +16,6 @@ const CardProduto = ({id,nome,preco,quantidade,descricao,imgurl}) => {
       <div className='containerInfoProd'>
         <p className="nomeProd">{nome}</p>
         <p className="precoProd">R$: {preco}</p>
-        <p className="quantidadeProd">Quantidade restante: {quantidade}</p>
       </div>
       <button className="buttonVerMais" onClick={() => pageproduto(id)}>Ver Mais</button>
       <button className="buttonCompra">Comprar</button>
