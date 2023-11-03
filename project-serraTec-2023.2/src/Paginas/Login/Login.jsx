@@ -7,6 +7,7 @@ import Header from "../../components/header/header";
 import { useNavigate } from "react-router";
 import "./Login.css";
 import { useGeral } from "../../Contexto/Context";
+import Footer from "../../components/Footer/Footer";
 
 const Login = () => {
   const navigate = useNavigate();
@@ -125,6 +126,7 @@ const Login = () => {
           </Form>
       )}
       </div>
+      <Footer/>
     </>
   );
 };
