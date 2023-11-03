@@ -6,7 +6,7 @@
 .tituloJaLogado{
     text-align: center;
 }
-.conteinerbuttonLogin{
+.containerButtonLogin{
     display: flex;
     gap: 20px;
 }

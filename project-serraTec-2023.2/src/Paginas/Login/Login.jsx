@@ -62,10 +62,6 @@ const Login = () => {
     setGravarSenha(!gravarSenha);
   };
 
-  useEffect(() => {
-    
-  }, []);
-
   return (
     <>
       <Header />
