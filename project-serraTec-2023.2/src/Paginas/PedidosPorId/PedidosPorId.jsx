@@ -1,6 +1,7 @@
 import { useParams } from "react-router-dom";
 import Header from "../../components/header/header";
 import { useNavigate } from "react-router";
+import Footer from "../../components/Footer/Footer";
 
 const PedidosPorId = () => {  
   const { email } = useParams()
@@ -15,6 +16,7 @@ const PedidosPorId = () => {
         <Header/>
         Pagina dos pedidos Especificos desse cliente com esse email: {email}
         <button className="buttonPedidoEspecifico" onClick={retornandoPageInicial}> Pagina de Produtos </button>
+        <Footer/>
       </>
     );
   };

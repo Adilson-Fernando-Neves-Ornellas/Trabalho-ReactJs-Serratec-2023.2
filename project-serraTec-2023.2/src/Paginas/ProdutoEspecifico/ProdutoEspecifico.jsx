@@ -2,7 +2,8 @@ import { useParams } from "react-router-dom";
 import { api } from "../../api/api"
 import { useState, useEffect } from "react";
 import NavBar from "../../components/NavBar/NavBar";
-import "./ProdutoEspecifico.css"
+import "./ProdutoEspecifico.css";
+import Footer from "../../components/Footer/Footer";
 
 
 const ProdutoEspecifico = () => {  
@@ -35,6 +36,7 @@ const ProdutoEspecifico = () => {
           <p className="tituloConteinerDescricao">Descrição do Produto:</p>
           <p className="descricao">{produto.descricao}</p>
         </div>
+        <Footer/>
       </>
     );
   };
