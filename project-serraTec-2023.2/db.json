@@ -2,7 +2,7 @@
   "produtos": [
     {
       "id": 1,
-      "nome": "Notebook HP 15.6\"",
+      "nome": "Notebook HP 15.6",
       "preco": 1499.99,
       "quantidade": 25,
       "descricao": "Notebook HP com tela de 15.6 polegadas, processador Intel Core i5 e 8GB de RAM.",

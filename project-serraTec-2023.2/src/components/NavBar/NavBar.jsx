@@ -2,11 +2,20 @@ import "./NavBar.css";
 import imgcarrinho from "../../imagens/imgcarrinho.svg";
 import Header from "../header/header";
 import { useAuth } from "../../Contexto/Context";
+import { useState } from "react";
 
 const NavBar = () => {
   const { isLoggedIn, email } = useAuth();
+  const [busca, setBusca] = useState();
+  const [listaFilter, setListaFilter] = useState();
+  const {listaProduto} = useAuth()
 
-  console.log(isLoggedIn)
+  const buscarProd = (e) =>{    
+    e.preventDefault();
+    setListaFilter(listaProduto.filter((prod) => { prod.nome === busca }))
+    console.log(listaFilter)
+  }
+
   return (
     <>
       <div className="navBarContainer">
@@ -14,9 +23,14 @@ const NavBar = () => {
           <h1 className="tituloEcommerce">Grupo02</h1>
           <div className="conteinerInput">
             <input
+            value={busca}
+              onChange={(string) => {
+                setBusca(string.target.value);
+              }}
               className="imputBusca"
               type="text"
               placeholder="O que você está procurando?"
+              onClick={buscarProd}
             />
           </div>
           <div className="containerLoginEcarrinho">

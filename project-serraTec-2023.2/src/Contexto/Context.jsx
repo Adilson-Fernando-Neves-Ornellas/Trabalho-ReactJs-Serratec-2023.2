@@ -7,7 +7,7 @@ export const AuthProvider = ({ children }) => {
   const [user, setUser] = useState(null);
   const [isLoggedIn, setIsLoggedIn] = useState(false);
   const [idUsuario, setidusuario] = useState(''); 
-
+  const [listaProduto, setListaProduto] = useState([]);
 
   const login = (userData,idUsuario) => {
     setUser(userData);
@@ -23,7 +23,7 @@ export const AuthProvider = ({ children }) => {
   // Resto do seu código permanece inalterado
 
   return (
-    <AuthContext.Provider value={{ user, login, logout, isLoggedIn, idUsuario}}>
+    <AuthContext.Provider value={{ user, login, logout, isLoggedIn, idUsuario, listaProduto , setListaProduto}}>
       {children}
     </AuthContext.Provider>
   );

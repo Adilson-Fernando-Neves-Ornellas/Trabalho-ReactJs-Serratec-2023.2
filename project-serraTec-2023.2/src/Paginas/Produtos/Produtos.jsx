@@ -3,9 +3,11 @@ import { useState, useEffect } from "react";
 import { api } from "../../api/api";
 import NavBar from "../../components/NavBar/NavBar";
 import "./Produtos.css";
+import { useAuth } from "../../Contexto/Context";
 
 const Produtos = () => {
-  const [listaProduto, setListaProduto] = useState([]);
+
+  const {listaProduto, setListaProduto} = useAuth()
 
   useEffect(() => {
     getProdutos();
