@@ -1,31 +1,41 @@
-import "./NavBar.css"
-import imgcarrinho from '../../imagens/imgcarrinho.svg'
+import "./NavBar.css";
+import imgcarrinho from "../../imagens/imgcarrinho.svg";
 import Header from "../header/header";
+import { useAuth } from "../../Contexto/Context";
+
 const NavBar = () => {
+  const { isLoggedIn, email } = useAuth();
 
-
-  
-    return (
-      <>  
-        <div className="navBarContainer">
-          <div className='containerMenuNavBar'>
-          <h1 className="tituloEcommerce">
-            Grupo02
-          </h1>
+  console.log(isLoggedIn)
+  return (
+    <>
+      <div className="navBarContainer">
+        <div className="containerMenuNavBar">
+          <h1 className="tituloEcommerce">Grupo02</h1>
           <div className="conteinerInput">
-            <input className='imputBusca' type="text" placeholder='O que você está procurando?' />
+            <input
+              className="imputBusca"
+              type="text"
+              placeholder="O que você está procurando?"
+            />
           </div>
           <div className="containerLoginEcarrinho">
-              <a className='linkLogin' href="/Login"> ENTRAR </a>
-              <a className='buttoncarrinho' href="/carrinho">
-                <img className='imgcarrinho' src={imgcarrinho} alt="Imagem do carrinho de compra " />
-              </a>
+            <a className="linkLogin" href = { isLoggedIn ?  "/pedidos/"+email : "/Login"}>
+              {isLoggedIn ? ' MEUS PEDIDOS':'ENTRAR'}
+            </a>
+            <a className="buttoncarrinho" href="/carrinho">
+              <img
+                className="imgcarrinho"
+                src={imgcarrinho}
+                alt="Imagem do carrinho de compra "
+              />
+            </a>
           </div>
-          </div>
-          <Header/>
         </div>
-      </>
-    );
-  };
-  
-  export default NavBar;
+        <Header />
+      </div>
+    </>
+  );
+};
+
+export default NavBar;

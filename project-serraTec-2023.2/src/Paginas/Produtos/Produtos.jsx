@@ -1,8 +1,8 @@
 import CardProduto from "../../components/CardProdutos/CardProduto";
 import { useState, useEffect } from "react";
-import { api } from "../../api/api"
+import { api } from "../../api/api";
 import NavBar from "../../components/NavBar/NavBar";
-import './Produtos.css'
+import "./Produtos.css";
 
 const Produtos = () => {
   const [listaProduto, setListaProduto] = useState([]);
@@ -18,7 +18,7 @@ const Produtos = () => {
 
   return (
     <>
-      <NavBar/>
+      <NavBar />
       <div className="conteinerCard">
         {listaProduto.map((produto) => (
           <CardProduto

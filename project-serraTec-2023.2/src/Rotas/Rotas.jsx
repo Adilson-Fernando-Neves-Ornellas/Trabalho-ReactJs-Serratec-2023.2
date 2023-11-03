@@ -12,7 +12,7 @@ const Rotas = createBrowserRouter([
     {path: "/cadastro", element: <Cadastro />}, //opcional
     {path: "/login", element: <Login /> },
     {path: "/carrinho", element: <Carrinho /> },
-    {path: "/pedidos/:email", element: <PedidosPorId />}, //opcional
+    {path: "/pedidos/:id", element: <PedidosPorId />}, //opcional
 ]);
 
 export default Rotas;

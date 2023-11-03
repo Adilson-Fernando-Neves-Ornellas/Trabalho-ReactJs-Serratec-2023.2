@@ -1,3 +1,11 @@
+.containerMeusPedidos{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+.tituloJaLogado{
+    text-align: center;
+}
 .conteinerbuttonLogin{
     display: flex;
     gap: 20px;
