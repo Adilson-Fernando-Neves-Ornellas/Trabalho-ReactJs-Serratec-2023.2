@@ -14,7 +14,7 @@ SERRATEC
 
 Visão geral
 
-    ○ Como projeto final da Disciplina WEB do SERRATEC, o desafio proposto é a criação de uma aplicação “e-commerce”.
+    ● Como projeto final da Disciplina WEB do SERRATEC, o desafio proposto é a criação de uma aplicação “e-commerce”.
   
 Objetivos
 
