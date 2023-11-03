@@ -2,11 +2,11 @@ import React, { useEffect } from "react";
 import Header from "../../components/header/header";
 import Footer from "../../components/Footer/Footer";
 import CardCarrinho from "../../components/CardCarinho/CardCarrinho";
-import { useAuth } from "../../Contexto/Context";
+import { useGeral } from "../../Contexto/Context";
 import './Carrinho.css'
 
 const Carrinho = () => {
-  const { listaCarrinho } = useAuth();
+  const { listaCarrinho } = useGeral();
 
   let valortotal = 0;
 

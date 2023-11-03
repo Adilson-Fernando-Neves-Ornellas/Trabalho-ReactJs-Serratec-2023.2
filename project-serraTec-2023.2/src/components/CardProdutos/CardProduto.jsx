@@ -1,11 +1,11 @@
 import './CardProdutos.css'
 import { useNavigate } from "react-router-dom"
 import { api } from "../../api/api";
-import { useAuth } from '../../Contexto/Context';
+import { useGeral } from '../../Contexto/Context';
 
 
 const CardProduto = ({id,nome,preco,quantidade,descricao,imgurl}) => { 
-  const {setListaCarrinho, listaCarrinho} = useAuth()
+  const {setListaCarrinho, listaCarrinho} = useGeral()
   const navigate = useNavigate()
 
   function pageproduto(id) {
