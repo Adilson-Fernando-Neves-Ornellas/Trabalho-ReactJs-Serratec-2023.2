@@ -8,7 +8,6 @@ const CardProduto = ({id,nome,preco,quantidade,descricao,imgurl}) => {
   function pageproduto(id){
     navigate("/produto/"+ id)
   }
-  
     return (
     <div className="card" key={id}>
       <div className='conteinerImgProd'>
@@ -17,7 +16,6 @@ const CardProduto = ({id,nome,preco,quantidade,descricao,imgurl}) => {
       <div className='containerInfoProd'>
         <p className="nomeProd">{nome}</p>
         <p className="precoProd">R$: {preco}</p>
-        <p className="descricaoProd">{descricao}</p>
         <p className="quantidadeProd">Quantidade restante: {quantidade}</p>
       </div>
       <button className="buttonVerMais" onClick={() => pageproduto(id)}>Ver Mais</button>
