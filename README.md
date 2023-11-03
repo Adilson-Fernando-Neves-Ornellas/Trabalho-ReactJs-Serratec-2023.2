@@ -5,7 +5,12 @@ Desenvolvimento WEB
 SERRATEC
 
 ## Participantes
+- Adilson Fernando
+- Day
+- Filipi Cardoso
 - Isaque Perez Rodrigues
+- Taynara
+
 
 Visão geral
     - Como projeto final da Disciplina WEB do SERRATEC, o desafio proposto é a criação de uma
@@ -21,6 +26,7 @@ Objetivos
     - Tela de Login, solicitando: ✔️
       - Email
       - Senha
+        
     - Tela de Listagem de Produtos:
       - Nesta tela deverá ser possível filtrar um produto pelo nome do mesmo.
       - Não deverão ser exibidos os produtos sem quantidade em estoque.
