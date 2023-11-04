@@ -5,7 +5,7 @@ import { AuthContext } from '../../Contexto/Context';
 
 
 const CardProduto = ({id,nome,preco,quantidade,descricao,imgurl}) => { 
-const {setListaCarrinho, listaCarrinho,listaProduto} = useContext(AuthContext)
+const {setListaCarrinho, listaCarrinho,listaProduto, setTemListaCarrinho} = useContext(AuthContext)
 
   const navigate = useNavigate()
 
@@ -16,6 +16,7 @@ const {setListaCarrinho, listaCarrinho,listaProduto} = useContext(AuthContext)
   const adicinarAoCarrinho = (id) => {
     const produtoASerAdicionado = listaProduto.find((prod) => prod.id === id);
     setListaCarrinho([...listaCarrinho, produtoASerAdicionado]);
+    setTemListaCarrinho(true);
   }
 
   return (

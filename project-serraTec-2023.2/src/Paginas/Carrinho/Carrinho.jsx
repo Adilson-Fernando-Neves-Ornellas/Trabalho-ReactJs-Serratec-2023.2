@@ -9,23 +9,34 @@ import { useNavigate } from "react-router-dom";
 
 
 const Carrinho = () => {
-  const { listaCarrinho , setListaCarrinho, idUsuario , isLoggedIn } = useContext(AuthContext);
+  const { listaCarrinho , setListaCarrinho, idUsuario , isLoggedIn,temListaCarrinho,setTemListaCarrinho } = useContext(AuthContext);
 
   const navigate = useNavigate()
 
   let valortotal = listaCarrinho.reduce(
     (acumulador, valorTotal) => acumulador + valorTotal.preco, 0);
 
-    function fazerPedido() {
-    navigate("/pedidos/"+ idUsuario)
+  function fazerPedido() {
+    if(temListaCarrinho == false){
+      alert("Não é possivel fazer um pedido sem nenhum produto, retornando a pagina de produtos")
+      navigate("/")
+    }else{
+      navigate("/pedidos/"+ idUsuario)
+    }
   }
   
-    function pageLogin() {
-    navigate("/login")
+  function pageLogin() {
+    if(temListaCarrinho == false){
+      alert("Não é possivel fazer um pedido sem nenhum produto, retornando a pagina de produtos")
+      navigate("/")
+    }else{
+      navigate("/login")
     }
+  }
   
   function esvaziarCarrinho(){
     setListaCarrinho([]);
+    setTemListaCarrinho(false);
   }
 
   return (
