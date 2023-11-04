@@ -2,21 +2,22 @@ import React, { useEffect } from "react";
 import Header from "../../components/header/header";
 import Footer from "../../components/Footer/Footer";
 import CardCarrinho from "../../components/CardCarinho/CardCarrinho";
-import { useGeral } from "../../Contexto/Context";
 import './Carrinho.css'
+import { useContext } from "react";
+import { AuthContext } from "../../Contexto/Context";
+
 
 const Carrinho = () => {
-  const { listaCarrinho } = useGeral();
+  const { listaCarrinho,listaProduto } = useContext(AuthContext);
 
   let valortotal = 0;
 
   useEffect(() => {
-    // Qualquer código que dependa da listaCarrinho atualizada pode ser colocado aqui
     valortotal = listaCarrinho.reduce(
       (acumulador, valorTotal) => acumulador + valorTotal.preco, 0);
-
     console.log(listaCarrinho);
-  }, [listaCarrinho]);
+    console.log(listaProduto);
+  }, []);
 
   return (
     <>

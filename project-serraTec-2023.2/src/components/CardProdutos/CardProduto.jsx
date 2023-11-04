@@ -1,24 +1,22 @@
 import './CardProdutos.css'
-import { useNavigate } from "react-router-dom"
-import { api } from "../../api/api";
-import { useGeral } from '../../Contexto/Context';
+import { useNavigate } from "react-router-dom";
+import { useContext } from "react";
+import { AuthContext } from '../../Contexto/Context';
 
 
 const CardProduto = ({id,nome,preco,quantidade,descricao,imgurl}) => { 
-  const {setListaCarrinho, listaCarrinho} = useGeral()
+const {setListaCarrinho, listaCarrinho,listaProduto} = useContext(AuthContext)
+
   const navigate = useNavigate()
 
   function pageproduto(id) {
     navigate("/produto/"+ id)
   }
-  const getProduto = async (id) => {
-    const response = await api.get("/produtos/" + id);
-    setListaCarrinho([...listaCarrinho, response.data]);
-  };
 
   const adicinarAoCarrinho = (id) => {
-    getProduto(id);
-    console.log(listaCarrinho)
+    const produtoASerAdicionado = listaProduto.find((prod) => prod.id === id);
+    setListaCarrinho([...listaCarrinho, produtoASerAdicionado]);
+    console.log(listaCarrinho);
   }
 
   return (
