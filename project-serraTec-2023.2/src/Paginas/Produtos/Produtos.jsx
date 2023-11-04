@@ -1,14 +1,15 @@
-import { useGeral } from "../../Contexto/Context";
 import CardProduto from "../../components/CardProdutos/CardProduto";
 import React, {useEffect, useState } from "react";
 import { api } from "../../api/api";
 import NavBar from "../../components/NavBar/NavBar";
 import "./Produtos.css";
+import { useContext } from "react";
+import { AuthContext } from "../../Contexto/Context"; 
+
 import Footer from "../../components/Footer/Footer";
 
 const Produtos = () => {
-
-  const {listaProduto, setListaProduto} = useGeral([]);
+  const {listaProduto, setListaProduto} = useContext(AuthContext)
 
   useEffect(() => {
     getProdutos();
@@ -16,9 +17,11 @@ const Produtos = () => {
 
   const getProdutos = async () => {
     const response = await api.get("/produtos");
-    setListaProduto(response.data);
-  }; 
-
+    const produtos = response.data;
+    let teste = produtos; // Assumindo que `teste` seja uma variável fora do escopo do componente.
+    setListaProduto(produtos);
+  };
+  
   return (
     <>
       <NavBar />
@@ -32,7 +35,6 @@ const Produtos = () => {
             quantidade={produto.quantidade}
             descricao={produto.descricao}
             imgurl={produto.imgurl}
-            getProdutos={getProdutos}
           />
         ))}
       </div>

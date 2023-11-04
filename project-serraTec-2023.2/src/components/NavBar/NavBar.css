@@ -13,16 +13,7 @@
 .mensagemBoasVindas{
     text-align: center;
 }
-@media (max-width: 1024px) {
-    .containerInput{
-        display: none;
-    }
-}
-.inputBuscar{
-    border-radius: 8px;
-    padding: 8px;
-    width: 140%;
-}
+
 .containerLoginEcarrinho{
     display: flex;
     align-items: center;
@@ -33,6 +24,8 @@
     color: white;
     font-style: normal;
     text-decoration: none;
+    border: 0;
+    background-color: transparent;
 }
 .buttoncarrinho{
     border: 0;
@@ -89,4 +82,7 @@
     font-style: normal;
     text-decoration: none;
     border-radius: 5px;
+}
+.linkdesativado{
+    display: none;
 }

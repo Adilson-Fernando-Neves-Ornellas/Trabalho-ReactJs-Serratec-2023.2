@@ -1,15 +1,31 @@
 import "./NavBar.css";
+import { useContext } from "react";
 import imgcarrinho from "../../imagens/imgcarrinho.svg";
 import Header from "../header/header";
 import { api } from "../../api/api";
-import { AuthContext, useGeral } from "../../Contexto/Context";
 import { useEffect, useState } from "react";
+import { AuthContext } from "../../Contexto/Context";
+import { useNavigate } from "react-router";
 
 const NavBar = () => {
-  const { isLoggedIn, email } = useGeral();
   const [busca, setBusca] = useState("");
-  const { listaProduto, setListaProduto } = useGeral(AuthContext);
+  const { listaProduto, setListaProduto } = useContext(AuthContext)
+   const { isLoggedIn,idUsuario,setIsLoggedIn } = useContext(AuthContext)
+  const navigate = useNavigate();
 
+  const desativarUsuario = () => {
+    setIsLoggedIn(false);
+  }
+  const pagePedidos = () =>{
+    navigate("/pedidos/"+idUsuario);
+  }
+  const pageLogin = () =>{
+    navigate("/login");
+  }
+
+  const pageCarrinho = () =>{
+    navigate("/carrinho");
+  }
   useEffect(() => {
     getProdutos();
   }, []);
@@ -50,17 +66,21 @@ const NavBar = () => {
         <button className="bttPesquisar" onClick={buscarProd}>Pesquisar</button>
           <div className="containerInput">                     
           </div>
+
           <div className="containerLoginEcarrinho">
-            <a className="linkLogin" href = { isLoggedIn ?  "/pedidos/"+email : "/Login"}>
-              {isLoggedIn ? ' MEUS PEDIDOS':'ENTRAR'}
-            </a>
-            <a className="buttoncarrinho" href="/carrinho">
+          <button className="linkLogin" onClick={isLoggedIn ? pagePedidos : pageLogin}>
+              {isLoggedIn ? ' Meus pedidos':'Entrar'}
+            </button>
+            <button className="buttoncarrinho" onClick={pageCarrinho}>
               <img
                 className="imgcarrinho"
                 src={imgcarrinho}
                 alt="Imagem do carrinho de compra "
               />
-            </a>
+            </button>
+            <button className={isLoggedIn ? "linkLogin" : "linkdesativado"} onClick={isLoggedIn ? desativarUsuario : ""}>
+              {isLoggedIn ? ' Sair':''}
+            </button>
           </div>
         </div>
         <Header />
@@ -68,5 +88,6 @@ const NavBar = () => {
     </>
   );
 };
+
 
 export default NavBar;
