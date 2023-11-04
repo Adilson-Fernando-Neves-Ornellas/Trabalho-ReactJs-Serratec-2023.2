@@ -1,6 +1,16 @@
 .conteinerCarrinho{
     padding: 15px;
 }
+.containerCardCarrinho{
+    display: flex;
+    flex-wrap: wrap;
+    overflow-y: hidden;
+    padding: 20px;
+    gap: 10px;
+    object-fit: contain;
+    align-items: center;
+    justify-content: center;
+}
 .buttonFinalizarCompra {
     width: 100%;
     padding: 10px;
@@ -8,14 +18,16 @@
     border-radius: 10px;
     background-color: #1E730D;
     color: white;
-    transition: background-color 0.1s, color 0.1s; /* Adicione uma transição suave para suavizar a mudança de cor. */
+    transition: background-color 0.1s, color 0.1s; 
   }
   
 .buttonFinalizarCompra:hover {
-    background-color: rgba(30, 115, 13, 0.8); /* Escurece 10% no hover */
-    color: rgba(255, 255, 255, 0.8); /* Escurece o texto 10% no hover */
+    background-color: rgba(30, 115, 13, 0.8); 
+    color: rgba(255, 255, 255, 0.8); 
 }
-
+.tituloCardcarrinho{
+    text-align: center;
+}
 .buttonFinalizarCompra:active {
-    background-color: rgba(30, 115, 13, 0.65); /* Escurece 15% quando clicado */
+    background-color: rgba(30, 115, 13, 0.65);
 }

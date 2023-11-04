@@ -66,3 +66,29 @@
     padding: 20px;
     font-size: 3vw;
 }
+.like{
+    width: 30px;  
+    margin-right: 10px;  
+}
+.dislike{
+    width: 30px;
+}
+.likeContador{
+    font-size: 20px;
+    color: white;
+}
+.dislikeContador{
+    font-size: 20px;
+    color: white;
+}
+.bttnLike{
+    padding: 10px;
+    border-radius: 20px; 
+    background-color: #05132E;
+    margin-bottom: 10px;
+}
+.bttnDisLike{
+    padding: 10px;
+    border-radius: 20px; 
+    background-color: #05132E;
+}

@@ -1,39 +1,37 @@
-import React, { useEffect } from "react";
+import React from "react";
 import Header from "../../components/header/header";
 import Footer from "../../components/Footer/Footer";
 import CardCarrinho from "../../components/CardCarinho/CardCarrinho";
-import { useGeral } from "../../Contexto/Context";
 import './Carrinho.css'
+import { useContext } from "react";
+import { AuthContext } from "../../Contexto/Context";
+
 
 const Carrinho = () => {
-  const { listaCarrinho } = useGeral();
+  const { listaCarrinho } = useContext(AuthContext);
 
-  let valortotal = 0;
-
-  useEffect(() => {
-    // Qualquer código que dependa da listaCarrinho atualizada pode ser colocado aqui
-    valortotal = listaCarrinho.reduce(
-      (acumulador, valorTotal) => acumulador + valorTotal.preco, 0);
-
-    console.log(listaCarrinho);
-  }, [listaCarrinho]);
+  let valortotal = listaCarrinho.reduce(
+    (acumulador, valorTotal) => acumulador + valorTotal.preco, 0);
 
   return (
     <>
       <Header />
      <div className="conteinerCarrinho">
-      {listaCarrinho.map((carrinho) => (
-        <CardCarrinho
-        key={carrinho.id}
-        img={carrinho.imgUrl}
-        nome={carrinho.nome}
-        precoItems={carrinho.preco}
-        quantidadeItem={carrinho.quantidade}
-        />
-        ))}
+      <h1 className="tituloCardcarrinho">Meu carrinho de compras</h1> 
+      <div className="containerCardCarrinho">
+        {listaCarrinho.map((carrinho) => (
+          <CardCarrinho
+          key={carrinho.id}
+          img={carrinho.imgurl}
+          nome={carrinho.nome}
+          precoItems={carrinho.preco}
+          // quantidadeItem={carrinho.quantidade}
+          />
+          ))}
+        </div> 
       <p className="precoProd">R$: {valortotal}</p>
       <button className="buttonFinalizarCompra">Finalizar Compra</button>
-    </div> 
+    </div>
       <Footer />
     </>
   );

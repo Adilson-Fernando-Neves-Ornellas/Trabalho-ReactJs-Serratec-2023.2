@@ -6,8 +6,9 @@ import "bootstrap/dist/css/bootstrap.min.css";
 import Header from "../../components/header/header";
 import { useNavigate } from "react-router";
 import "./Login.css";
-import { useGeral } from "../../Contexto/Context";
 import Footer from "../../components/Footer/Footer";
+import { useContext } from "react";
+import { AuthContext } from "../../Contexto/Context"; 
 
 const Login = () => {
   const navigate = useNavigate();
@@ -15,7 +16,7 @@ const Login = () => {
   const [senha, setSenha] = useState("");
   const [gravarSenha, setGravarSenha] = useState(false);
   const [usuario, setUsuario] = useState([]);
-  const { login, isLoggedIn } = useGeral();
+  const {isLoggedIn,setIsLoggedIn,setIdUsuario} = useContext(AuthContext);
 
   const irParaMeusPedidos= () =>{
     navigate("/pedidos/" + email);
@@ -30,11 +31,13 @@ const Login = () => {
     setUsuario(response.data[0]);
   };
 
+
   function verificarLogin(e) {
     e.preventDefault();
     getUsuarios();
     if (usuario.id) {
-      login(true,usuario.id);
+      setIsLoggedIn(true)
+      setIdUsuario(usuario.id)
       alert("Login efetuado com sucesso");
       navigate("/pedidos/" + usuario.id);
     } else {
