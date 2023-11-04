@@ -5,13 +5,24 @@ import CardCarrinho from "../../components/CardCarinho/CardCarrinho";
 import './Carrinho.css'
 import { useContext } from "react";
 import { AuthContext } from "../../Contexto/Context";
+import { useNavigate } from "react-router-dom";
 
 
 const Carrinho = () => {
-  const { listaCarrinho } = useContext(AuthContext);
+  const { listaCarrinho , idUsuario , isLoggedIn } = useContext(AuthContext);
+
+  const navigate = useNavigate()
 
   let valortotal = listaCarrinho.reduce(
     (acumulador, valorTotal) => acumulador + valorTotal.preco, 0);
+
+    function fazerPedido() {
+    navigate("/pedidos/"+ idUsuario)
+  }
+  
+    function pageLogin() {
+    navigate("/login")
+    }
 
   return (
     <>
@@ -30,7 +41,7 @@ const Carrinho = () => {
           ))}
         </div> 
       <p className="precoProd">R$: {valortotal}</p>
-      <button className="buttonFinalizarCompra">Finalizar Compra</button>
+      <button className ="buttonFinalizarCompra" onClick={isLoggedIn ? () => fazerPedido():() =>pageLogin ()}>Finalizar Compra</button>
     </div>
       <Footer />
     </>

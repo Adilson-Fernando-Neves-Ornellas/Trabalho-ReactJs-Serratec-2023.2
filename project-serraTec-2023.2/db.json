@@ -179,6 +179,12 @@
       "email": "filipi.c.12@hotmail.com",
       "senha": "12345678",
       "id": 3
+    },
+    {
+      "nome": "Taynara",
+      "email": "taynara@hotmail.com",
+      "senha": "123456",
+      "id": 4
     }
   ],
   "pedidos": [
