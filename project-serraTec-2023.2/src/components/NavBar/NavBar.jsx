@@ -1,21 +1,38 @@
 import "./NavBar.css";
 import imgcarrinho from "../../imagens/imgcarrinho.svg";
 import Header from "../header/header";
-import { useGeral } from "../../Contexto/Context";
-import { useState } from "react";
+import { api } from "../../api/api";
+import { AuthContext, useGeral } from "../../Contexto/Context";
+import { useEffect, useState } from "react";
 
 const NavBar = () => {
-  const { isLoggedIn, email, setListaProduto, listaProduto} = useGeral();
+  const { isLoggedIn, email } = useGeral();
   const [busca, setBusca] = useState("");
+  const { listaProduto, setListaProduto } = useGeral(AuthContext);
+
+  useEffect(() => {
+    getProdutos();
+  }, []);
+
+  const getProdutos = async () => {
+    const response = await api.get("/produtos");
+    setListaProduto(response.data);
+  };
 
   const buscarProd = (e) =>{
     e.preventDefault();
-    setListaProduto(listaProduto.filter((prod) => prod.nome === busca))
-      if(busca === ""){
-        alert("Informe um produto!")
-      }else{
-        alert("Produto não encontrado!")
-      }
+    if(busca === ""){
+      getProdutos();
+    }else{
+      const produtosEncontrados = listaProduto.filter((prod) => prod.nome === busca);
+
+      if (produtosEncontrados.length === 0) {
+        alert("Produto não encontrado!");
+      } else {
+        // Exiba apenas os produtos encontrados
+        setListaProduto(produtosEncontrados);
+      }        
+    }
   }
 
   return (
@@ -23,16 +40,15 @@ const NavBar = () => {
       <div className="navBarContainer">
         <div className="containerMenuNavBar">
           <h1 className="tituloEcommerce">Grupo02</h1>
-          <div className="containerInput">
-            <input
-
-            value={busca}
+          <input
+              value={busca}
               onChange={(string) => {setBusca(string.target.value);}}
               className="inputBuscar"
               type="text"
               placeholder="O que você está procurando?"
             />
-            <button className="pesquisar" onClick={buscarProd}>Pesquisar</button>
+        <button className="bttPesquisar" onClick={buscarProd}>Pesquisar</button>
+          <div className="containerInput">                     
           </div>
           <div className="containerLoginEcarrinho">
             <a className="linkLogin" href = { isLoggedIn ?  "/pedidos/"+email : "/Login"}>

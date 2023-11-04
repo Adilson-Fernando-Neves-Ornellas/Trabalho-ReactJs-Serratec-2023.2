@@ -1,14 +1,14 @@
+import { useGeral } from "../../Contexto/Context";
 import CardProduto from "../../components/CardProdutos/CardProduto";
-import {useEffect } from "react";
+import React, {useEffect, useState } from "react";
 import { api } from "../../api/api";
 import NavBar from "../../components/NavBar/NavBar";
 import "./Produtos.css";
-import { useGeral } from "../../Contexto/Context";
 import Footer from "../../components/Footer/Footer";
 
 const Produtos = () => {
 
-  const {listaProduto, setListaProduto} = useGeral()
+  const {listaProduto, setListaProduto} = useGeral([]);
 
   useEffect(() => {
     getProdutos();
@@ -17,7 +17,7 @@ const Produtos = () => {
   const getProdutos = async () => {
     const response = await api.get("/produtos");
     setListaProduto(response.data);
-  };
+  }; 
 
   return (
     <>

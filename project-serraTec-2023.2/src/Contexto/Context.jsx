@@ -1,13 +1,13 @@
 import PropTypes from 'prop-types';
 import { createContext, useContext, useState } from 'react';
 
-const AuthContext = createContext();
+export const AuthContext = createContext();
 
 export const AuthProvider = ({ children }) => {
   const [user, setUser] = useState(null);
   const [isLoggedIn, setIsLoggedIn] = useState(false);
-  const [idUsuario, setidusuario] = useState(''); 
-  const [listaProduto, setListaProduto] = useState([]);
+  const [idUsuario, setidusuario] = useState('');
+  const [listaProduto, setListaProduto] = useState([]);   
   const [listaCarrinho, setListaCarrinho] = useState([]);
 
   const login = (userData,idUsuario) => {
@@ -22,7 +22,7 @@ export const AuthProvider = ({ children }) => {
   };
 
   return (
-    <AuthContext.Provider value={{ user, login, logout, isLoggedIn, idUsuario, listaProduto , setListaProduto, listaCarrinho, setListaCarrinho}}>
+    <AuthContext.Provider value={{ user, login, logout, isLoggedIn, idUsuario, listaProduto, setListaProduto, listaCarrinho, setListaCarrinho}}>
       {children}
     </AuthContext.Provider>
   );

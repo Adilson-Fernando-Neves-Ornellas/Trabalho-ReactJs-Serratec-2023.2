@@ -40,11 +40,9 @@ const Cadastro = () => {
         <br />
         <input className="input" value={nome} onChange={(e) => { setNome(e.target.value) }} placeholder="Insira seu Nome"/>
         
-
         <label className="label">Email</label>
         <br />
         <input className="input" value={email} onChange={(e) => { setEmail(e.target.value) }} placeholder="Insira seu Email"/>
-
 
         <label className="label">Senha</label>
         <br />
