@@ -6,6 +6,7 @@ import { api } from "../../api/api";
 import { useEffect, useState } from "react";
 import { AuthContext } from "../../Contexto/Context";
 import { useNavigate } from "react-router";
+import logo from '../../imagens/logo.png';
 
 const NavBar = () => {
   const [busca, setBusca] = useState("");
@@ -15,6 +16,10 @@ const NavBar = () => {
 
   const desativarUsuario = () => {
     setIsLoggedIn(false);
+  }
+  const mostrarTodosProdutos = () =>{
+    getProdutos();
+    setBusca('');
   }
   const pagePedidos = () =>{
     navigate("/pedidos/"+idUsuario);
@@ -55,18 +60,20 @@ const NavBar = () => {
     <>
       <div className="navBarContainer">
         <div className="containerMenuNavBar">
-          <h1 className="tituloEcommerce">Grupo02</h1>
-          <input
-              value={busca}
-              onChange={(string) => {setBusca(string.target.value);}}
-              className="inputBuscar"
-              type="text"
-              placeholder="O que você está procurando?"
-            />
-        <button className="bttPesquisar" onClick={buscarProd}>Pesquisar</button>
-          <div className="containerInput">                     
-          </div>
-
+          <h1 className="tituloEcommerce">
+            <button className="buttonHome" onClick={mostrarTodosProdutos}>
+                <img className="imgLogo" src={logo} alt="Logo do Trabalho" />
+            </button>
+          </h1>
+          <div className='containerImput'>
+            <input className="imputBusca"
+                value={busca}
+                onChange={(string) => {setBusca(string.target.value);}}
+                type="text"
+                placeholder="O que você está procurando?"
+                />
+          <button className="bttPesquisar" onClick={buscarProd}>Pesquisar</button>
+        </div>
           <div className="containerLoginEcarrinho">
           <button className="linkLogin" onClick={isLoggedIn ? pagePedidos : pageLogin}>
               {isLoggedIn ? ' Meus pedidos':'Entrar'}
