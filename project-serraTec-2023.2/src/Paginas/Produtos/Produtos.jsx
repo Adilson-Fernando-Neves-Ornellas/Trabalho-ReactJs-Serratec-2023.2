@@ -1,11 +1,14 @@
 import CardProduto from "../../components/CardProdutos/CardProduto";
-import { useState, useEffect } from "react";
-import { api } from "../../api/api"
+import {useEffect } from "react";
+import { api } from "../../api/api";
 import NavBar from "../../components/NavBar/NavBar";
-import './Produtos.css'
+import "./Produtos.css";
+import { useGeral } from "../../Contexto/Context";
+import Footer from "../../components/Footer/Footer";
 
 const Produtos = () => {
-  const [listaProduto, setListaProduto] = useState([]);
+
+  const {listaProduto, setListaProduto} = useGeral()
 
   useEffect(() => {
     getProdutos();
@@ -18,8 +21,8 @@ const Produtos = () => {
 
   return (
     <>
-      <NavBar/>
-      <div className="conteinerCard">
+      <NavBar />
+      <div className="containerCard">
         {listaProduto.map((produto) => (
           <CardProduto
             key={produto.id}
@@ -33,6 +36,7 @@ const Produtos = () => {
           />
         ))}
       </div>
+      <Footer/>
     </>
   );
 };

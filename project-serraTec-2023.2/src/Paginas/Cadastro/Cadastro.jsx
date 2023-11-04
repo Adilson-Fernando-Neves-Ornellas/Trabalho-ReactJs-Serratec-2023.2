@@ -2,7 +2,8 @@ import { useState } from "react";
 import { useNavigate } from "react-router-dom"
 import "./Cadastro.css"
 import Header from "../../components/header/header";
-import { api } from '../../api/api'
+import { api } from '../../api/api';
+import Footer from "../../components/Footer/Footer";
 
 const Cadastro = () => {  
     const [nome,setNome] = useState('')
@@ -14,12 +15,8 @@ const Cadastro = () => {
     const handleSave = async (e) => {
       e.preventDefault()
       if (nome != '' && senha != ''&& email != '' ){
-        const response = await api.post('/usuarios',
-      {
-        nome,
-        email,
-        senha   
-      })
+        const response = await api.post('/usuarios', {nome, email, senha})
+
         handleLimpar()
         alert("Cliente Cadastrado com Sucesso, retornando a pagina de login!")
         navigate("/Login")
@@ -60,6 +57,7 @@ const Cadastro = () => {
         </div>        
       </form>
       </div>
+      <Footer/>
       </>
 
     );

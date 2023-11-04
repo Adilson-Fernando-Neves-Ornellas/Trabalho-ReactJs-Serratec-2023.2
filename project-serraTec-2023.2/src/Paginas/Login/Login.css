@@ -1,4 +1,12 @@
-.conteinerbuttonLogin{
+.containerMeusPedidos{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+.tituloJaLogado{
+    text-align: center;
+}
+.containerButtonLogin{
     display: flex;
     gap: 20px;
 }
