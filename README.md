@@ -28,35 +28,34 @@ Especificações
       tem que ser feito:
 
         ● Tela de Login, solicitando: ✔️
-          ○ Email
-          ○ Senha
+          ○ Email - ok
+          ○ Senha -ok
           
         ● Tela de Listagem de Produtos:
           ○ Nesta tela deverá ser possível filtrar um produto pelo nome do mesmo.✔️
-          ○ Não deverão ser exibidos os produtos sem quantidade em estoque.
+          ○ Não deverão ser exibidos os produtos sem quantidade em estoque. - Falta ainda fazer essa verificação
           
         ● Tela de informação sobre um produto específico:✔️
-          ○ Nesta tela, o produto será descrito por completo.
+          ○ Nesta tela, o produto será descrito por completo. - ok 
           
-        ● Tela ou Modal para Carrinho:
+        ● Tela ou Modal para Carrinho: - criado Tela
           ○ Qualquer produto poderá ser adicionado no carrinho.✔️
           ○ O usuário escolherá a quantidade e incluirá no carrinho.
           ○ Opção para esvaziar o carrinho.
-          ○ O carrinho deve ser acessível de
           
         ● Caso o usuário queira comprar, o mesmo poderá acessar o carrinho onde irá
-        finalizar a compra:
+        finalizar a compra: ✔️
           ○ Por termos a limitação da API, ao finalizar a compra, deverá ser realizada
           requisição para diminuir a quantidade de produtos logo após a finalização da
-          compra.
+          compra. - falta ainda fazer 
           ○ Após os passos acima redirecionar para a tela de Pedidos realizados, onde
-          conterá uma listagem de todos os pedidos feitos por aquele usuário.      
+          conterá uma listagem de todos os pedidos feitos por aquele usuário. ✔️      
 Extras
 
     ● Tela de Cadastro de Usuário, com os campos:✔️
-        ○ Nome completo
-        ○ Email
-        ○ Senha
+        ○ Nome completo - ok
+        ○ Email - ok
+        ○ Senha - ok
     ● Permitir ver os produtos por categoria, utilizando rotas dinâmicas.
     ● Dentro da tela de um produto específico será possível avaliar o produto
     como gostei ou não gostei. Qualquer usuário que logar na aplicação, irá ver a
