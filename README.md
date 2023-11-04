@@ -32,14 +32,14 @@ Especificações
           ○ Senha
           
         ● Tela de Listagem de Produtos:
-          ○ Nesta tela deverá ser possível filtrar um produto pelo nome do mesmo.
+          ○ Nesta tela deverá ser possível filtrar um produto pelo nome do mesmo.✔️
           ○ Não deverão ser exibidos os produtos sem quantidade em estoque.
           
-        ● Tela de informação sobre um produto específico:
+        ● Tela de informação sobre um produto específico:✔️
           ○ Nesta tela, o produto será descrito por completo.
           
         ● Tela ou Modal para Carrinho:
-          ○ Qualquer produto poderá ser adicionado no carrinho.
+          ○ Qualquer produto poderá ser adicionado no carrinho.✔️
           ○ O usuário escolherá a quantidade e incluirá no carrinho.
           ○ Opção para esvaziar o carrinho.
           ○ O carrinho deve ser acessível de
@@ -53,7 +53,7 @@ Especificações
           conterá uma listagem de todos os pedidos feitos por aquele usuário.      
 Extras
 
-    ● Tela de Cadastro de Usuário, com os campos:
+    ● Tela de Cadastro de Usuário, com os campos:✔️
         ○ Nome completo
         ○ Email
         ○ Senha
