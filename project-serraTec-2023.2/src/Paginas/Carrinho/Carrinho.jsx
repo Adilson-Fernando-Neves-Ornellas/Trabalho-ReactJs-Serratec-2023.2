@@ -9,7 +9,7 @@ import { useNavigate } from "react-router-dom";
 
 
 const Carrinho = () => {
-  const { listaCarrinho , idUsuario , isLoggedIn } = useContext(AuthContext);
+  const { listaCarrinho , setListaCarrinho, idUsuario , isLoggedIn } = useContext(AuthContext);
 
   const navigate = useNavigate()
 
@@ -23,6 +23,10 @@ const Carrinho = () => {
     function pageLogin() {
     navigate("/login")
     }
+  
+  function esvaziarCarrinho(){
+    setListaCarrinho([]);
+  }
 
   return (
     <>
@@ -41,7 +45,10 @@ const Carrinho = () => {
           ))}
         </div> 
       <p className="precoProd">R$: {valortotal}</p>
-      <button className ="buttonFinalizarCompra" onClick={isLoggedIn ? () => fazerPedido():() =>pageLogin ()}>Finalizar Compra</button>
+      <div className="containerButttonCarrinho">
+        <button className ="buttonEsvaziarcarrinho" onClick={() => esvaziarCarrinho()}>Esvaziar Carrinho</button>
+        <button className ="buttonFinalizarCompra" onClick={isLoggedIn ? () => fazerPedido():() =>pageLogin ()}>Finalizar Compra</button>
+      </div>
     </div>
       <Footer />
     </>
