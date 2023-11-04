@@ -16,7 +16,6 @@ const {setListaCarrinho, listaCarrinho,listaProduto} = useContext(AuthContext)
   const adicinarAoCarrinho = (id) => {
     const produtoASerAdicionado = listaProduto.find((prod) => prod.id === id);
     setListaCarrinho([...listaCarrinho, produtoASerAdicionado]);
-    console.log(listaCarrinho);
   }
 
   return (
