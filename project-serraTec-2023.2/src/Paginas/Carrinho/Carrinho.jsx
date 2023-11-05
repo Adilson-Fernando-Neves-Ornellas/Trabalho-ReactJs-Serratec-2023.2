@@ -14,8 +14,9 @@ const Carrinho = () => {
   const navigate = useNavigate()
 
   let valortotal = listaCarrinho.reduce(
-    (acumulador, valorTotal) => acumulador + valorTotal.preco, 0);
-
+    (acumulador, produto) => acumulador + (produto.preco * produto.quantidadeProd), 0
+  );
+  
   function fazerPedido() {
     if(temListaCarrinho == false){
       alert("Não é possivel fazer um pedido sem nenhum produto, retornando a pagina de produtos")
@@ -51,10 +52,10 @@ const Carrinho = () => {
           img={carrinho.imgurl}
           nome={carrinho.nome}
           precoItems={carrinho.preco}
-          // quantidadeItem={carrinho.quantidade}
+          quantidadeProd={carrinho.quantidadeProd}
           />
           ))}
-        </div> 
+        </div>
       <p className="precoProd">R$: {valortotal}</p>
       <div className="containerButttonCarrinho">
         <button className ="buttonEsvaziarcarrinho" onClick={() => esvaziarCarrinho()}>Esvaziar Carrinho</button>

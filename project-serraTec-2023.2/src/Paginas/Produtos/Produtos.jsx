@@ -32,7 +32,7 @@ const Produtos = () => {
             id={produto.id}
             nome={produto.nome}
             preco={produto.preco}
-            quantidade={produto.quantidade}
+            estoque={produto.estoque}
             descricao={produto.descricao}
             imgurl={produto.imgurl}
           />

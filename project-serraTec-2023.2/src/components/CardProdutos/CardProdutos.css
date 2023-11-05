@@ -38,6 +38,10 @@
 
 .containerInfoProd {
     margin: 5px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center; 
+    align-items: center;
 }
 
 .nomeProd {
@@ -93,4 +97,19 @@
 
 .buttonVerMais:active {
     background-color: #004ab9; /* Escurece 15% quando clicado */
+}
+.conteinerButtonquantidade{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.buttonAlterarQuantidade{
+    padding: 1.5px 3px;
+    border: 0;
+    background-color: white;
+}
+.textQuantidadeAlterada{
+    margin: 0;
+    padding-left: 5px;
+    padding-right: 5px;
 }
