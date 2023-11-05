@@ -8,7 +8,7 @@ export const AuthProvider = ({ children }) => {
     const [temListaCarrinho, setTemListaCarrinho] = useState(false);
     const [isLoggedIn, setIsLoggedIn] = useState(false);
     const [idUsuario, setIdUsuario] = useState(false);
-    
+     
     //const [user, setUser] = useState(null);
     
 

@@ -11,7 +11,8 @@ import logo from '../../imagens/logo.png';
 const NavBar = () => {
   const [busca, setBusca] = useState("");
   const { listaProduto, setListaProduto } = useContext(AuthContext)
-   const { isLoggedIn,idUsuario,setIsLoggedIn } = useContext(AuthContext)
+  const { isLoggedIn,idUsuario,setIsLoggedIn } = useContext(AuthContext)
+  
   const navigate = useNavigate();
 
   const desativarUsuario = () => {
@@ -20,6 +21,7 @@ const NavBar = () => {
   const mostrarTodosProdutos = () =>{
     getProdutos();
     setBusca('');
+    navigate("/");
   }
   const pagePedidos = () =>{
     navigate("/pedidos/"+idUsuario);

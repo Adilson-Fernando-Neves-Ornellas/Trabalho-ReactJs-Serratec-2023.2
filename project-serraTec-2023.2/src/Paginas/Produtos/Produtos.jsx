@@ -35,6 +35,8 @@ const Produtos = () => {
             estoque={produto.estoque}
             descricao={produto.descricao}
             imgurl={produto.imgurl}
+            like={produto.like}
+            disLike={produto.disLike}
           />
         ))}
       </div>
