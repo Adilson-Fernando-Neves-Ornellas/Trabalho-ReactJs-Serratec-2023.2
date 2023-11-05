@@ -33,7 +33,7 @@ Especificações
           
         ● Tela de Listagem de Produtos:
           ○ Nesta tela deverá ser possível filtrar um produto pelo nome do mesmo.✔️
-          ○ Não deverão ser exibidos os produtos sem quantidade em estoque. - Falta ainda fazer essa verificação
+          ○ Não deverão ser exibidos os produtos sem quantidade em estoque. ✔️
           
         ● Tela de informação sobre um produto específico:✔️
           ○ Nesta tela, o produto será descrito por completo. ✔️
@@ -47,7 +47,7 @@ Especificações
         finalizar a compra: ✔️
           ○ Por termos a limitação da API, ao finalizar a compra, deverá ser realizada
           requisição para diminuir a quantidade de produtos logo após a finalização da
-          compra. - falta ainda fazer 
+          compra. ❌
           ○ Após os passos acima redirecionar para a tela de Pedidos realizados, onde
           conterá uma listagem de todos os pedidos feitos por aquele usuário. ✔️      
 Extras
@@ -56,12 +56,13 @@ Extras
         ○ Nome completo ✔️
         ○ Email ✔️
         ○ Senha ✔️
-    ● Permitir ver os produtos por categoria, utilizando rotas dinâmicas.
+    ● Permitir ver os produtos por categoria, utilizando rotas dinâmicas. ❌
     ● Dentro da tela de um produto específico será possível avaliar o produto
-    como gostei ou não gostei. Qualquer usuário que logar na aplicação, irá ver a
-    nota dada por outros usuários.
+    como gostei ou não gostei. ✔️
+    ● Qualquer usuário que logar na aplicação, irá ver a
+    nota dada por outros usuários.❌
     ● Ao finalizar a compra a mesma deverá ser registrada via API na rota de
-    pedidos.
+    pedidos. ❌
     
 Regras
 
@@ -82,8 +83,8 @@ Regras
         ○ quantidade ✔️
         ○ descrição ✔️
         ○ imgurl ✔️
-        ○ favoritos
+        ○ favoritos ❌
     ● A entidade “Pedidos”, deve conter no mínimo os seguintes campos:
         ○ valortotal ✔️
         ○ iduser ✔️
-        ○ itens 
+        ○ itens ❌
