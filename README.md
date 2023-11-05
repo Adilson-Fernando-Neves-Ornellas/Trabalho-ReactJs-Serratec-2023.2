@@ -47,7 +47,7 @@ Especificações
         finalizar a compra: ✔️
           ○ Por termos a limitação da API, ao finalizar a compra, deverá ser realizada
           requisição para diminuir a quantidade de produtos logo após a finalização da
-          compra. ❌
+          compra. ✔️
           ○ Após os passos acima redirecionar para a tela de Pedidos realizados, onde
           conterá uma listagem de todos os pedidos feitos por aquele usuário. ✔️
 Extras
