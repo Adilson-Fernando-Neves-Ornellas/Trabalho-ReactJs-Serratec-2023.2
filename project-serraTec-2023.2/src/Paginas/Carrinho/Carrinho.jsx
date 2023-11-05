@@ -40,6 +40,24 @@ const Carrinho = () => {
   const salvarpedidoAndDeleteCarrinho = async () => {
       const produtos = [...listaCarrinho]
       const response = await api.post('/pedidos', {produtos,idUsuario,valortotal})
+
+      for(let i = 0; i < produtos.length; i++){
+        const estoqueNovo = produtos[i].estoque - produtos[i].quantidadeProd
+
+        const produtoParaAtualizar = {
+          id: produtos[i].id,
+          nome: produtos[i].nome,
+          preco: produtos[i].preco,
+          estoque: estoqueNovo,
+          descricao: produtos[i].descricao,
+          imgurl: produtos[i].imgurl,
+          like:produtos[i].like,
+          disLike:produtos[i].disLike
+        };
+
+        const updateResponse = await api.put(`/produtos/${produtos[i].id}`, produtoParaAtualizar);
+      }
+
       esvaziarCarrinho()
       alert("Pedido realizado com sucesso!")
   }

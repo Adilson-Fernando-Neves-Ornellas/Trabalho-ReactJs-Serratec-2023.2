@@ -1,7 +1,6 @@
 import "./CardPedido.css";
 
 const CardPedido = ({ valortotal,produtos }) => {
-  console.log(produtos)
   return (
       <div className="cardPedido">
         <div className="containerInfoPedido">
