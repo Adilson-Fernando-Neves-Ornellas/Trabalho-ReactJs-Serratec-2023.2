@@ -55,7 +55,7 @@ const [quantidadeProd,setQuantidadeProd] = useState(0)
       </div>
     </div>
     <button className="buttonVerMais" onClick={() => pageproduto(id)}>Ver Mais</button>
-    <button className="buttonCompra" onClick={() => adicinarAoCarrinho(id)}>Comprar</button>
+    <button className="buttonCompra" onClick={() => adicinarAoCarrinho(id)}>Adicionar ao carrinho</button>
   </div>
 );
 }
