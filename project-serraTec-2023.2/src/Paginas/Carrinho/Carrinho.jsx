@@ -39,9 +39,9 @@ const Carrinho = () => {
 
   const salvarpedidoAndDeleteCarrinho = async () => {
       const produtos = [[...listaCarrinho]]
-      console.log(produtos)
+      const response = await api.post('/pedidos', {produtos,idUsuario,valortotal})
+      esvaziarCarrinho()
       alert("Pedido realizado com sucesso!")
-      const response = await api.post('/pedidos', {produtos,idUsuario})
   }
   
   function esvaziarCarrinho(){
