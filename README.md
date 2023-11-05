@@ -28,20 +28,20 @@ Especificações
       tem que ser feito:
 
         ● Tela de Login, solicitando: ✔️
-          ○ Email - ok
-          ○ Senha -ok
+          ○ Email ✔️
+          ○ Senha ✔️
           
         ● Tela de Listagem de Produtos:
           ○ Nesta tela deverá ser possível filtrar um produto pelo nome do mesmo.✔️
           ○ Não deverão ser exibidos os produtos sem quantidade em estoque. - Falta ainda fazer essa verificação
           
         ● Tela de informação sobre um produto específico:✔️
-          ○ Nesta tela, o produto será descrito por completo. - ok 
+          ○ Nesta tela, o produto será descrito por completo. ✔️
           
         ● Tela ou Modal para Carrinho: - criado Tela
           ○ Qualquer produto poderá ser adicionado no carrinho.✔️
-          ○ O usuário escolherá a quantidade e incluirá no carrinho.
-          ○ Opção para esvaziar o carrinho.
+          ○ O usuário escolherá a quantidade e incluirá no carrinho. - ✔️
+          ○ Opção para esvaziar o carrinho. ✔️
           
         ● Caso o usuário queira comprar, o mesmo poderá acessar o carrinho onde irá
         finalizar a compra: ✔️
@@ -53,9 +53,9 @@ Especificações
 Extras
 
     ● Tela de Cadastro de Usuário, com os campos:✔️
-        ○ Nome completo - ok
-        ○ Email - ok
-        ○ Senha - ok
+        ○ Nome completo ✔️
+        ○ Email ✔️
+        ○ Senha ✔️
     ● Permitir ver os produtos por categoria, utilizando rotas dinâmicas.
     ● Dentro da tela de um produto específico será possível avaliar o produto
     como gostei ou não gostei. Qualquer usuário que logar na aplicação, irá ver a
@@ -73,17 +73,17 @@ Regras
     ● Não poderá ser utilizado Next nem outro framework parecido e as rotas devem ser
     feitas utilizando React Router Dom conforme versão 6.
     ● A entidade “Users”, deve conter no mínimo os seguintes campos:
-        ○ nome
-        ○ email
-        ○ senha
+        ○ nome ✔️
+        ○ email ✔️
+        ○ senha ✔️
     ● A entidade “Produto”, deve conter no mínimo os seguintes campos:
-        ○ nome
-        ○ preco
-        ○ quantidade
-        ○ descrição
-        ○ imgurl
+        ○ nome ✔️
+        ○ preco ✔️
+        ○ quantidade ✔️
+        ○ descrição ✔️
+        ○ imgurl ✔️
         ○ favoritos
     ● A entidade “Pedidos”, deve conter no mínimo os seguintes campos:
-        ○ valortotal
-        ○ iduser
-        ○ itens
+        ○ valortotal ✔️
+        ○ iduser ✔️
+        ○ itens 
