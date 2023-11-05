@@ -49,7 +49,7 @@ Especificações
           requisição para diminuir a quantidade de produtos logo após a finalização da
           compra. ❌
           ○ Após os passos acima redirecionar para a tela de Pedidos realizados, onde
-          conterá uma listagem de todos os pedidos feitos por aquele usuário. ❌(Mais ou menos)     
+          conterá uma listagem de todos os pedidos feitos por aquele usuário. ✔️
 Extras
 
     ● Tela de Cadastro de Usuário, com os campos:✔️
