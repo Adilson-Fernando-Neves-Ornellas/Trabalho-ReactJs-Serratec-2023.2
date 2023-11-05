@@ -87,4 +87,4 @@ Regras
     ● A entidade “Pedidos”, deve conter no mínimo os seguintes campos:
         ○ valortotal ✔️
         ○ iduser ✔️
-        ○ itens ❌
+        ○ itens ✔️
