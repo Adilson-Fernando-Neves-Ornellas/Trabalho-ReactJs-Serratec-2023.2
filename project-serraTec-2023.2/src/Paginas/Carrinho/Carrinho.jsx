@@ -3,6 +3,7 @@ import Header from "../../components/header/header";
 import Footer from "../../components/Footer/Footer";
 import CardCarrinho from "../../components/CardCarinho/CardCarrinho";
 import './Carrinho.css'
+import { api } from '../../api/api';
 import { useContext } from "react";
 import { AuthContext } from "../../Contexto/Context";
 import { useNavigate } from "react-router-dom";
@@ -22,6 +23,7 @@ const Carrinho = () => {
       alert("Não é possivel fazer um pedido sem nenhum produto, retornando a pagina de produtos")
       navigate("/")
     }else{
+      salvarpedidoAndDeleteCarrinho()
       navigate("/pedidos/"+ idUsuario)
     }
   }
@@ -33,6 +35,13 @@ const Carrinho = () => {
     }else{
       navigate("/login")
     }
+  }
+
+  const salvarpedidoAndDeleteCarrinho = async () => {
+      const produtos = [[...listaCarrinho]]
+      console.log(produtos)
+      alert("Pedido realizado com sucesso!")
+      const response = await api.post('/pedidos', {produtos,idUsuario})
   }
   
   function esvaziarCarrinho(){
