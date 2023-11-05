@@ -39,7 +39,7 @@ const PedidosPorId = () => {
           <CardPedido
           key={pedido.id}
           valortotal={pedido.valortotal}
-          itens={pedido.produtos}
+          produtos={pedido.produtos}
           />
           ))}
         </div> 
