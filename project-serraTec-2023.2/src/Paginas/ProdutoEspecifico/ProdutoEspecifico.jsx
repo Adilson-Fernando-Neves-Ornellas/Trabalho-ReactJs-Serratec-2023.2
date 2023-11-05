@@ -6,7 +6,7 @@ import "./ProdutoEspecifico.css";
 import Footer from "../../components/Footer/Footer";
 // import like from "../../imagens/like.png"
 // import disLike from "../../imagens/dislike.png"
-
+//comentario
 
 const ProdutoEspecifico = () => {  
   const { id } = useParams()
