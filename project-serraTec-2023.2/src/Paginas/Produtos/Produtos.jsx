@@ -18,7 +18,6 @@ const Produtos = () => {
   const getProdutos = async () => {
     const response = await api.get("/produtos");
     const produtos = response.data;
-    let teste = produtos; // Assumindo que `teste` seja uma variável fora do escopo do componente.
     setListaProduto(produtos);
   };
   
