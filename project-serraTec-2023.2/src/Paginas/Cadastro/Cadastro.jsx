@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { useNavigate } from "react-router-dom"
 import "./Cadastro.css"
-import Header from "../../components/header/header";
+import Header from "../../components/Header/Header";
 import { api } from '../../api/api';
 import Footer from "../../components/Footer/Footer";
 
