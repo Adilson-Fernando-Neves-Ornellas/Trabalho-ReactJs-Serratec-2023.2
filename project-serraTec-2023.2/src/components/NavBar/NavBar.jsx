@@ -11,15 +11,18 @@ import logo from '../../imagens/logo.png';
 const NavBar = () => {
   const [busca, setBusca] = useState("");
   const { listaProduto, setListaProduto } = useContext(AuthContext)
-   const { isLoggedIn,idUsuario,setIsLoggedIn } = useContext(AuthContext)
+  const { isLoggedIn,idUsuario,setIsLoggedIn } = useContext(AuthContext)
+  
   const navigate = useNavigate();
 
   const desativarUsuario = () => {
     setIsLoggedIn(false);
   }
+  
   const mostrarTodosProdutos = () =>{
     getProdutos();
     setBusca('');
+    navigate("/");
   }
   const pagePedidos = () =>{
     navigate("/pedidos/"+idUsuario);
@@ -33,6 +36,7 @@ const NavBar = () => {
   }
   useEffect(() => {
     getProdutos();
+    console.log(isLoggedIn)
   }, []);
 
   const getProdutos = async () => {
@@ -85,9 +89,9 @@ const NavBar = () => {
                 alt="Imagem do carrinho de compra "
               />
             </button>
-            <button className={isLoggedIn ? "linkLogin" : "linkdesativado"} onClick={isLoggedIn ? desativarUsuario : ""}>
+            <a className={isLoggedIn ? "linkLogin" : "linkdesativado"} href="/">
               {isLoggedIn ? ' Sair':''}
-            </button>
+            </a>
           </div>
         </div>
         <Header />

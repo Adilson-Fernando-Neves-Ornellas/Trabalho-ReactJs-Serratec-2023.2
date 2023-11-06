@@ -8,7 +8,7 @@ import CardPedido from "../../components/CardPedido/CardPedido";
 import "./PedidosPorid.css";
 
 
-  const PedidosPorId = () => {  
+const PedidosPorId = () => {  
   const navigate = useNavigate();
   const { idUsuario} = useContext(AuthContext)
   const [pedidos, setPedidos]=useState([])
@@ -19,7 +19,7 @@ import "./PedidosPorid.css";
 
   const getPedidos = async () => {
     const response = await api.get("/pedidos", {params: {idUsuario}});
-    setPedidos([response.data]);
+    setPedidos(response.data);
   };
 
   function pageLogin() {
@@ -39,7 +39,7 @@ import "./PedidosPorid.css";
           <CardPedido
           key={pedido.id}
           valortotal={pedido.valortotal}
-          itens={pedido.itens}
+          produtos={pedido.produtos}
           />
           ))}
         </div> 
