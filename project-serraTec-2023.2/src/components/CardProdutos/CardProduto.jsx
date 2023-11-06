@@ -3,8 +3,8 @@ import { useNavigate } from "react-router-dom";
 import { useContext, useState, useEffect } from "react";
 import { AuthContext } from '../../Contexto/Context';
 import { api } from "../../api/api";
-import likes from "../../imagens/like.png";
-import disLikes from "../../imagens/disLike.png";
+import likes from "../../imagens/likes.png";
+import disLikes from "../../imagens/dislikes.png";
 
 const CardProduto = ({ id, nome, preco, estoque, descricao, imgurl, like, disLike, favoritos }) => {
   const { setListaCarrinho, listaCarrinho, listaProduto, setTemListaCarrinho, isLoggedIn, idUsuario } = useContext(AuthContext);
