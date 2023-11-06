@@ -52,7 +52,8 @@ const Carrinho = () => {
           descricao: produtos[i].descricao,
           imgurl: produtos[i].imgurl,
           like:produtos[i].like,
-          disLike:produtos[i].disLike
+          disLike:produtos[i].disLike,
+          favoritos:produtos[i].favoritos
         };
 
         const updateResponse = await api.put(`/produtos/${produtos[i].id}`, produtoParaAtualizar);

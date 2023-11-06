@@ -8,6 +8,7 @@ import disLikes from "../../imagens/disLike.png";
 
 const CardProduto = ({ id, nome, preco, estoque, descricao, imgurl, like, disLike, favoritos }) => {
   const { setListaCarrinho, listaCarrinho, listaProduto, setTemListaCarrinho, isLoggedIn, idUsuario } = useContext(AuthContext);
+
   const [quantidadeProd, setQuantidadeProd] = useState(0);
   const [mensagemQuantidadeMaxPermitida, setMensagemQuantidadeMaxPermitida] = useState("");
   const [countLike, setCountLike] = useState(0);
@@ -59,7 +60,6 @@ const CardProduto = ({ id, nome, preco, estoque, descricao, imgurl, like, disLik
     }
   }
 
-
   function handleLike() {
     setClickLike(!clickLike);
     setCountLike(clickLike ? countLike - 1 : countLike + 1);
@@ -78,6 +78,7 @@ const CardProduto = ({ id, nome, preco, estoque, descricao, imgurl, like, disLik
       setQuantidadeProd(quantidadeProd - 1);
     }
   }
+
 function aumentarQuantidade() {
     if (quantidadeProd >= estoque) {
       setMensagemQuantidadeMaxPermitida("Quantidade máxima em Estoque");
@@ -101,6 +102,7 @@ function aumentarQuantidade() {
       setTemListaCarrinho(true)
     }
   }
+  
   useEffect(() => {
     verificarSeEFavoritoouNao(id)
   }, []);
@@ -108,6 +110,7 @@ function aumentarQuantidade() {
 
 if (estoque > 0) {
     return (
+
       <div className="card" key={id}>
         <div className='conteinerImgProd'>
           <img className="imgcard" src={imgurl} alt={nome} />

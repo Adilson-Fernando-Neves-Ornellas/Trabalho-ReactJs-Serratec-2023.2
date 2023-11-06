@@ -6,7 +6,6 @@ import "./ProdutoEspecifico.css";
 import Footer from "../../components/Footer/Footer";
 // import like from "../../imagens/like.png"
 // import disLike from "../../imagens/dislike.png"
-//comentario
 
 const ProdutoEspecifico = () => {  
   const { id } = useParams()
@@ -18,6 +17,7 @@ const ProdutoEspecifico = () => {
     const response = await api.get("/produtos/"+ id);
     setProduto(response.data);
   };
+  
   useEffect(() => {
     getProdutoEspecifico();
   }, []);
