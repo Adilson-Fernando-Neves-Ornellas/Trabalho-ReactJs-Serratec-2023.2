@@ -3,7 +3,7 @@ import { useState } from "react";
 import Button from "react-bootstrap/Button";
 import Form from "react-bootstrap/Form";
 import "bootstrap/dist/css/bootstrap.min.css";
-import Header from "../../components/header/header";
+import Header from "../../components/Header/Header";
 import { useNavigate } from "react-router";
 import "./Login.css";
 import Footer from "../../components/Footer/Footer";

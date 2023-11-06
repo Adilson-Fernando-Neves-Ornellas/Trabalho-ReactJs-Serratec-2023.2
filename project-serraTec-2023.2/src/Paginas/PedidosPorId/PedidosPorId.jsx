@@ -1,4 +1,4 @@
-import Header from "../../components/header/header";
+import Header from "../../components/Header/Header";
 import { useNavigate } from "react-router";
 import Footer from "../../components/Footer/Footer";
 import { useContext, useState, useEffect } from "react";
