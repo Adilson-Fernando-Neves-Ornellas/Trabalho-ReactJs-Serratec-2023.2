@@ -5,7 +5,7 @@ import { AuthContext } from '../../Contexto/Context';
 import likes from "../../imagens/like.png";
 import disLikes from "../../imagens/disLike.png";
 
-const CardProduto = ({ id, nome, preco, estoque, descricao, imgurl, like, disLike }) => {
+const CardProduto = ({ id, nome, preco, estoque, descricao, imgurl, like, disLike, favoritos }) => {
   const { setListaCarrinho, listaCarrinho, listaProduto, setTemListaCarrinho } = useContext(AuthContext);
   const [quantidadeProd, setQuantidadeProd] = useState(0);
   const [mensagemQuantidadeMaxPermitida, setMensagemQuantidadeMaxPermitida] = useState("");
@@ -13,8 +13,15 @@ const CardProduto = ({ id, nome, preco, estoque, descricao, imgurl, like, disLik
   const [countDisLike, setCountDisLike] = useState(0);
   const [clickLike, setClickLike] = useState(false);
   const [clickDisLike, setClickDisLike] = useState(false);
+  const [clickFavorito, setClickFavorito] = useState(false);
+  const {isLoggedIn} = useContext(AuthContext)
 
   const navigate = useNavigate();
+
+  function handleFavoritar() {
+    setClickFavorito(!clickFavorito);
+    console.log(clickFavorito)
+  }
 
   function handleLike() {
     setClickLike(!clickLike);
@@ -73,6 +80,29 @@ if (estoque > 0) {
           </div>
           <h6>{mensagemQuantidadeMaxPermitida}</h6>
         </div>
+        
+        <button className='bttnFavoritar' onClick={async () => {
+          await api.patch(`/produtos/${id}`, { favoritos: !favoritos, });
+        }}>
+            <h3>Favoritos</h3>  
+        </button>
+        {/* {isLoggedIn ? 
+        const produtos = [...listaProduto]
+        for(let i = 0; i < produtos.length; i++){
+          
+          const produtoParaAtualizar = {
+            {id}: produtos[i].id,
+            {favoritos}: produtos[i].favoritos(handleFavoritar)           
+          };          
+          const updateResponse = await api.patch(`/produtos/${produtoSelecionado.id}`, produtoParaAtualizar);
+          }
+        <div>
+          <button className='bttnFavoritar' onClick={handleFavoritar}>
+            <h3>Favoritos</h3>
+          </button>
+        </div>: 
+        null
+        } */}
         <div className='containnerButtonLikeDislike'>
           <button className="bttnLike" onClick={handleLike}>
             <img className="like" src={likes} alt="like" />

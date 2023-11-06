@@ -37,6 +37,7 @@ const Produtos = () => {
             imgurl={produto.imgurl}
             like={produto.like}
             disLike={produto.disLike}
+            favoritos={produto.favoritos}
           />
         ))}
       </div>
