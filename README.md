@@ -62,7 +62,7 @@ Extras
     ● Qualquer usuário que logar na aplicação, irá ver a
     nota dada por outros usuários.❌
     ● Ao finalizar a compra a mesma deverá ser registrada via API na rota de
-    pedidos. ❌
+    pedidos. ✔️
     
 Regras
 
@@ -83,7 +83,7 @@ Regras
         ○ quantidade ✔️
         ○ descrição ✔️
         ○ imgurl ✔️
-        ○ favoritos ❌
+        ○ favoritos ✔️
     ● A entidade “Pedidos”, deve conter no mínimo os seguintes campos:
         ○ valortotal ✔️
         ○ iduser ✔️
