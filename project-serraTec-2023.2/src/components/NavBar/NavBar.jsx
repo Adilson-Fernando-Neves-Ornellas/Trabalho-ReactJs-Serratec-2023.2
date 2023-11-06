@@ -6,7 +6,7 @@ import { api } from "../../api/api";
 import { useEffect, useState } from "react";
 import { AuthContext } from "../../Contexto/Context";
 import { useNavigate } from "react-router";
-import logo from '../../imagens/logo.png';
+import logo from '../../imagens/Logo.png';
 
 const NavBar = () => {
   const [busca, setBusca] = useState("");
