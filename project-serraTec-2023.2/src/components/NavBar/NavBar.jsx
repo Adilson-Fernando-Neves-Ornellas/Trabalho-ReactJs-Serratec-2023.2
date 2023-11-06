@@ -18,6 +18,7 @@ const NavBar = () => {
   const desativarUsuario = () => {
     setIsLoggedIn(false);
   }
+  
   const mostrarTodosProdutos = () =>{
     getProdutos();
     setBusca('');
@@ -35,6 +36,7 @@ const NavBar = () => {
   }
   useEffect(() => {
     getProdutos();
+    console.log(isLoggedIn)
   }, []);
 
   const getProdutos = async () => {
@@ -87,9 +89,9 @@ const NavBar = () => {
                 alt="Imagem do carrinho de compra "
               />
             </button>
-            <button className={isLoggedIn ? "linkLogin" : "linkdesativado"} onClick={isLoggedIn ? desativarUsuario : ""}>
+            <a className={isLoggedIn ? "linkLogin" : "linkdesativado"} href="/">
               {isLoggedIn ? ' Sair':''}
-            </button>
+            </a>
           </div>
         </div>
         <Header />
