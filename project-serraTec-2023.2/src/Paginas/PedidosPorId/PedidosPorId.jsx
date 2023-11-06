@@ -5,7 +5,7 @@ import { useContext, useState, useEffect } from "react";
 import { AuthContext } from '../../Contexto/Context';
 import { api } from '../../api/api';
 import CardPedido from "../../components/CardPedido/CardPedido";
-import "./PedidosPorid.css";
+import "./PedidosPorId.css";
 
 
 const PedidosPorId = () => {  
