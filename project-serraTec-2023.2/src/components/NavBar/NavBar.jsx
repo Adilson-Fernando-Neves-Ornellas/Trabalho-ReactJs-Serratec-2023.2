@@ -1,7 +1,7 @@
 import "./NavBar.css";
 import { useContext } from "react";
 import imgcarrinho from "../../imagens/imgcarrinho.svg";
-import Header from "../header/header";
+import Header from "../Header/Header";
 import { api } from "../../api/api";
 import { useEffect, useState } from "react";
 import { AuthContext } from "../../Contexto/Context";
