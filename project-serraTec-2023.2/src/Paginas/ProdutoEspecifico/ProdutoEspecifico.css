@@ -1,94 +1,154 @@
-.conteinerPaginaProdEspecifico{
+.cardProduto {
     display: flex;
-    gap: 10px;
-    justify-content: center;
-    margin-top: 20px;
-}
-@media (max-width: 920px) {
-    .conteinerPaginaProdEspecifico{
+    background-color: #fff;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    margin: 20px;
+    padding: 20px;
+  }
+  @media (max-width: 700px) {
+    .cardProduto {
         flex-direction: column;
-        align-items: center;
     }
-    .conteinerImgProdEspecifico{
-        width: 100% !important;
-    }
-    .conteinerInfoProd{
-        width: 100% !important;
-        margin-left: 10px !important;
-        margin-right: 10px !important;
-    }
-}
-.imgProd{
-    width: 100%;
-}
-.nomeprod{
-    text-align: center;
-    font-size: 5vw;
-}
-.preçoProd{
-    text-align: center;
-    font-size: 6vw;
-    margin-bottom: 10px;
-}
-.qtdProd{
-    text-align: center;
-    font-size: 3vw;
-    margin-bottom: 25px;
-}
-.conteinerImgProdEspecifico{
-    width: 50%;
-}
-.conteinerInfoProd{
-    width: 50%;
-    margin-left: 10px;
-    margin-right: 10px;
-}
-.buttonCompra {
-    border: 0;
-    border-radius: 10px;
-    background-color: #1E730D;
-    color: white;
-    transition: background-color 0.1s, color 0.1s; /* Adicione uma transição suave para suavizar a mudança de cor. */
 }
   
-.buttonCompra:hover {
-    background-color: rgba(30, 115, 13, 0.8); /* Escurece 10% no hover */
-    color: rgba(255, 255, 255, 0.8); /* Escurece o texto 10% no hover */
-}
-.conteinerDesscricao{
+  .imagemContainer {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .imgProd {
+    max-width: 100%;
+    height: auto;
+  }
+  .preçoProd {
+    font-size: 80px; 
+  }
+  .botoesLikeDislike {
     margin-top: 10px;
-}
-.tituloConteinerDescricao{
- text-align: center;
- font-size: 4vw;
-}
-.descricao{
+    display: flex; 
+    align-items: center; 
+  }
+  
+  .informacoesContainer {
+    flex: 1;
+    margin-left: 20px;
+  }
+  
+  .informacoesContainer {
+    flex: 1;
+    margin-left: 20px;
+  }
+  
+  .nomeProd {
+    font-size: 24px;
+  }
+  
+  .preçoProd {
+    font-size: 20px; 
+    color: #007bff;
+  }
+  
+  .descricao {
+    font-size: 14px;
+    color: #666;
+  }
+  
+  
+
+.botoesAcao {
+    display: flex;
+    justify-content: space-between;
+  }
+  
+  .btnComprar,
+  .btnAdicionarCarrinho {
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 20px;
+    cursor: pointer;
+    font-size: 16px;
+    margin-right: 90px;
+    margin-left: 90px;  
+  }
+  .btnComprar:hover,
+  .btnAdicionarCarrinho:hover,
+  .btnCalcularFrete:hover
+   {
+    background-color: #414349; 
+  }
+  
+  .btnAdicionarCarrinho {
+    background-color: #4caf50; 
+  }
+
+.cardProduto {
+    display: flex;
+    background-color: #fff;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    margin: 20px;
     padding: 20px;
-    font-size: 3vw;
+  }
+  
+  .imagemContainer {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .imgProduto {
+    max-width: 100%;
+    height: auto;
+  }
+  
+  .botoesLikeDislike {
+    margin-top: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+
+.espaco-superior {
+    margin-top: 10px; 
+  }
+
+.botoesAcaoCEP {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 25px;
+  }
+      
+ 
+.btnComprar {
+    margin-right: 10px; 
+  }
+ 
+.containerQuantidadeAndMensagem{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
-.like{
-    width: 30px;  
-    margin-right: 10px;  
+  
+  .conteinerButtonquantidade{
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
-.dislike{
-    width: 30px;
+.buttonAlterarQuantidade{
+    padding: 1.5px 3px;
+    border: 0;
+    background-color: white;
 }
-.likeContador{
-    font-size: 20px;
-    color: white;
-}
-.dislikeContador{
-    font-size: 20px;
-    color: white;
-}
-.bttnLike{
-    padding: 10px;
-    border-radius: 20px; 
-    background-color: #05132E;
-    margin-bottom: 10px;
-}
-.bttnDisLike{
-    padding: 10px;
-    border-radius: 20px; 
-    background-color: #05132E;
+.textQuantidadeAlterada{
+    margin: 0;
+    padding-left: 5px;
+    padding-right: 5px;
 }
