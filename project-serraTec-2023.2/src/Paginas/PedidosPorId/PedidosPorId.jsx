@@ -28,7 +28,7 @@ const PedidosPorId = () => {
 
   useEffect(() => {
     getPedidos();
-  }, []);
+  }, [getPedidos()]);
 
     return (
 

@@ -35,6 +35,7 @@ const Login = () => {
   function verificarLogin(e) {
     e.preventDefault();
     getUsuarios();
+    getUsuarios();
     if (usuario.id) {
       setIsLoggedIn(true)
       setIdUsuario(usuario.id)

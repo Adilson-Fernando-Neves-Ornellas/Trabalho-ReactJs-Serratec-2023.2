@@ -15,11 +15,14 @@ const Cadastro = () => {
     const handleSave = async (e) => {
       e.preventDefault()
       if (nome != '' && senha != ''&& email != '' ){
-        const response = await api.post('/usuarios', {nome, email, senha})
+        try {
+          const response = await api.post('/usuarios', {nome, email, senha})
+        } catch (error) {
+          handleLimpar()
+          alert("Cliente Cadastrado com Sucesso, retornando a pagina de login!")
+          navigate("/Login")
+        }
 
-        handleLimpar()
-        alert("Cliente Cadastrado com Sucesso, retornando a pagina de login!")
-        navigate("/Login")
       }
       
     }

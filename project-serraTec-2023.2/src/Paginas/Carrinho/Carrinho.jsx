@@ -39,33 +39,32 @@ const Carrinho = () => {
 
   const salvarpedidoAndDeleteCarrinho = async () => {
       const produtos = [...listaCarrinho]
-      const response = await api.post('/pedidos', {produtos,idUsuario,valortotal})
-
-      atualizarEstoqueDosProdutos(Produtos)
-
-  }
-
-  const atualizarEstoqueDosProdutos = async (produtos) => {
-    for(let i = 0; i < produtos.length; i++){
-      const estoqueNovo = produtos[i].estoque - produtos[i].quantidadeProd
-
-      const produtoParaAtualizar = {
-        id: produtos[i].id,
-        nome: produtos[i].nome,
-        preco: produtos[i].preco,
-        estoque: estoqueNovo,
-        descricao: produtos[i].descricao,
-        imgurl: produtos[i].imgurl,
-        like:produtos[i].like,
-        disLike:produtos[i].disLike,
-        favoritos:produtos[i].favoritos
-      };
-
-      const updateResponse = await api.put(`/produtos/${produtos[i].id}`, produtoParaAtualizar);
-    }
-
-    esvaziarCarrinho()
-    alert("Pedido realizado com sucesso!")
+      try {
+        const response = await api.post('/pedidos', {produtos,idUsuario,valortotal})
+      } catch (error) {
+        for(let i = 0; i < produtos.length; i++){
+          const estoqueNovo = produtos[i].estoque - produtos[i].quantidadeProd
+    
+          const produtoParaAtualizar = {
+            id: produtos[i].id,
+            nome: produtos[i].nome,
+            preco: produtos[i].preco,
+            estoque: estoqueNovo,
+            descricao: produtos[i].descricao,
+            imgurl: produtos[i].imgurl,
+            like:produtos[i].like,
+            disLike:produtos[i].disLike,
+            favoritos:produtos[i].favoritos
+          };
+          try {
+            const updateResponse = await api.put(`/produtos/${produtos[i].id}`, produtoParaAtualizar);
+          } catch (error) {
+            
+          }
+        }
+        esvaziarCarrinho()
+        alert("Pedido realizado com sucesso!")
+      }
   }
   
   function esvaziarCarrinho(){
