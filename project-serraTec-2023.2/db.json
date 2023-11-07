@@ -4,7 +4,7 @@
       "id": 1,
       "nome": "Notebook HP 15.6",
       "preco": 1580.99,
-      "estoque": 2,
+      "estoque": 90,
       "descricao": "Notebook HP com tela de 15.6 polegadas, processador Intel Core i5 e 8GB de RAM.",
       "imgurl": "https://images.tcdn.com.br/img/img_prod/1002494/notebook_hp_250g7_core_i5_8265u_memoria_12gb_ssd_512gb_tela_15_6_hd_led_sistema_windows_10_home_8551_1_08f7d7866ea35360b4e91986c0899458.jpg",
       "like": 0,
@@ -189,7 +189,7 @@
           "imgurl": "https://images.tcdn.com.br/img/img_prod/1002494/notebook_hp_250g7_core_i5_8265u_memoria_12gb_ssd_512gb_tela_15_6_hd_led_sistema_windows_10_home_8551_1_08f7d7866ea35360b4e91986c0899458.jpg",
           "like": 0,
           "disLike": 0,
-          "quantidadeProd": 2
+          "quantidadeProd": 25
         }
       ],
       "idUsuario": 1,

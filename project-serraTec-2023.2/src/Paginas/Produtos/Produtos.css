@@ -13,3 +13,33 @@
     display: none;
 }
 
+.card {
+    width: 300px;
+    margin: 0 auto;
+    text-align: center;
+  }
+  
+  .slider {
+    overflow: hidden;
+    position: relative;
+    width: 100%;
+    height: 200px;
+  }
+  
+  .slide {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: none;
+  }
+  
+  .controls {
+    margin-top: 10px;
+  }
+  
+  button {
+    padding: 5px 10px;
+    margin: 0 5px;
+    cursor: pointer;
+  }
+  

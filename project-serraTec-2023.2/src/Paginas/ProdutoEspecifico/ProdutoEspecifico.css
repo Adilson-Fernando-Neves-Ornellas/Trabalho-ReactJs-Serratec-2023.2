@@ -1,94 +1,184 @@
-.conteinerPaginaProdEspecifico{
+.cardProduto {
+    /* ... outros estilos ... */
     display: flex;
-    gap: 10px;
-    justify-content: center;
-    margin-top: 20px;
-}
-@media (max-width: 920px) {
-    .conteinerPaginaProdEspecifico{
-        flex-direction: column;
-        align-items: center;
-    }
-    .conteinerImgProdEspecifico{
-        width: 100% !important;
-    }
-    .conteinerInfoProd{
-        width: 100% !important;
-        margin-left: 10px !important;
-        margin-right: 10px !important;
-    }
-}
-.imgProd{
-    width: 100%;
-}
-.nomeprod{
-    text-align: center;
-    font-size: 5vw;
-}
-.preçoProd{
-    text-align: center;
-    font-size: 6vw;
-    margin-bottom: 10px;
-}
-.qtdProd{
-    text-align: center;
-    font-size: 3vw;
-    margin-bottom: 25px;
-}
-.conteinerImgProdEspecifico{
-    width: 50%;
-}
-.conteinerInfoProd{
-    width: 50%;
-    margin-left: 10px;
-    margin-right: 10px;
-}
-.buttonCompra {
-    border: 0;
-    border-radius: 10px;
-    background-color: #1E730D;
-    color: white;
-    transition: background-color 0.1s, color 0.1s; /* Adicione uma transição suave para suavizar a mudança de cor. */
-}
-  
-.buttonCompra:hover {
-    background-color: rgba(30, 115, 13, 0.8); /* Escurece 10% no hover */
-    color: rgba(255, 255, 255, 0.8); /* Escurece o texto 10% no hover */
-}
-.conteinerDesscricao{
-    margin-top: 10px;
-}
-.tituloConteinerDescricao{
- text-align: center;
- font-size: 4vw;
-}
-.descricao{
+    background-color: #fff;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    margin: 20px;
     padding: 20px;
-    font-size: 3vw;
+  }
+  
+  .imagemContainer {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .imgProd {
+    max-width: 100%;
+    height: auto;
+  }
+  .preçoProd {
+    font-size: 80px; /*NÃO FOI Ajuste o tamanho da fonte conforme desejado */
+  }
+  .botoesLikeDislike {
+    margin-top: 10px;
+    display: flex; /* Torna os botões lado a lado */
+    align-items: center; /* Alinha os botões verticalmente ao centro */
+  }
+  
+  .bttnLike,
+  .bttnDisLike {
+    margin: 5px;
+    width: 100px; /* Largura dos botões */
+    height: 30px; /* Altura dos botões */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  .bttnLike img,
+  .bttnDisLike img {
+    max-width: 100%;
+    max-height: 100%;
+  }
+  
+  .informacoesContainer {
+    flex: 1;
+    margin-left: 20px;
+  }
+  
+  .informacoesContainer {
+    flex: 1;
+    margin-left: 20px;
+  }
+  
+  .nomeProd {
+    font-size: 24px;
+  }
+  
+  .preçoProd {
+    font-size: 20px; /* Reduza o tamanho do valor para 14 pixels (ou o tamanho desejado) */
+    color: #007bff;
+  }
+  
+  .descricao {
+    font-size: 14px; /* Mantenha o mesmo tamanho da descrição para que fiquem iguais */
+    color: #666;
+  }
+  
+  /* ... outros estilos ... */
+
+.botoesAcao {
+    display: flex;
+    justify-content: space-between;
+  }
+  
+  .btnComprar,
+  .btnAdicionarCarrinho {
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 20px;
+    cursor: pointer;
+    font-size: 16px;
+    margin-right: 90px;
+    margin-left: 90px;  
+  }
+  .btnComprar:hover,
+  .btnAdicionarCarrinho:hover,
+  .btnCalcularFrete:hover
+   {
+    background-color: #414349; /* Cor cinza mais escura no hover */
+  }
+  
+  .btnAdicionarCarrinho {
+    background-color: #4caf50; /* Cor diferente para o botão de Adicionar ao Carrinho */
+  }
+
+.cardProduto {
+    display: flex;
+    background-color: #fff;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    margin: 20px;
+    padding: 20px;
+  }
+  
+  .imagemContainer {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .imgProduto {
+    max-width: 100%;
+    height: auto;
+  }
+  
+  .botoesLikeDislike {
+    margin-top: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+/* No seu arquivo de estilo CSS */
+.espaco-superior {
+    margin-top: 10px; /* Defina a quantidade de espaço desejada, por exemplo, 10 pixels */
+  }
+/* No seu arquivo de estilo CSS */
+.botoesAcaoCEP {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 25px;
+  }
+      
+  /* No seu arquivo de estilo CSS */
+/* No seu arquivo de estilo CSS */
+/* No seu arquivo de estilo CSS */
+.inputCep {
+    border: 1px solid #000; /* Bordas com 1px de largura */
+    outline: none; /* Remover o destaque de foco */
+    border-radius: 5px; /* Arredonde as bordas */
+    margin-right: 10px; /* Adicionar margem à direita do campo de entrada */
+    padding: 5px 10px; /* Aumentar a largura interna */
+
+  }
+  
+  .btnCalcularFrete {
+    border: none; /* Remover a borda */
+    border-radius: 5px; /* Arredondar levemente as bordas */
+    background-color: #ccc; /* Cor cinza de fundo */
+    padding: 5px 10px; /* Aumentar a largura interna */
+    color: #000; /* Cor do texto em preto */
+  }
+ 
+.btnComprar {
+    margin-right: 10px; /* Adicione a margem à direita do botão "Comprar" */
+  }
+ 
+  
+  
+  .conteinerButtonquantidade{
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
-.like{
-    width: 30px;  
-    margin-right: 10px;  
+.buttonAlterarQuantidade{
+    padding: 1.5px 3px;
+    border: 0;
+    background-color: white;
 }
-.dislike{
-    width: 30px;
-}
-.likeContador{
-    font-size: 20px;
-    color: white;
-}
-.dislikeContador{
-    font-size: 20px;
-    color: white;
-}
-.bttnLike{
-    padding: 10px;
-    border-radius: 20px; 
-    background-color: #05132E;
-    margin-bottom: 10px;
-}
-.bttnDisLike{
-    padding: 10px;
-    border-radius: 20px; 
-    background-color: #05132E;
+.textQuantidadeAlterada{
+    margin: 0;
+    padding-left: 5px;
+    padding-right: 5px;
 }
