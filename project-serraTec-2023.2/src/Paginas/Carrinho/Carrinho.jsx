@@ -41,26 +41,31 @@ const Carrinho = () => {
       const produtos = [...listaCarrinho]
       const response = await api.post('/pedidos', {produtos,idUsuario,valortotal})
 
-      for(let i = 0; i < produtos.length; i++){
-        const estoqueNovo = produtos[i].estoque - produtos[i].quantidadeProd
+      atualizarEstoqueDosProdutos(Produtos)
 
-        const produtoParaAtualizar = {
-          id: produtos[i].id,
-          nome: produtos[i].nome,
-          preco: produtos[i].preco,
-          estoque: estoqueNovo,
-          descricao: produtos[i].descricao,
-          imgurl: produtos[i].imgurl,
-          like:produtos[i].like,
-          disLike:produtos[i].disLike,
-          favoritos:produtos[i].favoritos
-        };
+  }
 
-        const updateResponse = await api.put(`/produtos/${produtos[i].id}`, produtoParaAtualizar);
-      }
+  const atualizarEstoqueDosProdutos = async (produtos) => {
+    for(let i = 0; i < produtos.length; i++){
+      const estoqueNovo = produtos[i].estoque - produtos[i].quantidadeProd
 
-      esvaziarCarrinho()
-      alert("Pedido realizado com sucesso!")
+      const produtoParaAtualizar = {
+        id: produtos[i].id,
+        nome: produtos[i].nome,
+        preco: produtos[i].preco,
+        estoque: estoqueNovo,
+        descricao: produtos[i].descricao,
+        imgurl: produtos[i].imgurl,
+        like:produtos[i].like,
+        disLike:produtos[i].disLike,
+        favoritos:produtos[i].favoritos
+      };
+
+      const updateResponse = await api.put(`/produtos/${produtos[i].id}`, produtoParaAtualizar);
+    }
+
+    esvaziarCarrinho()
+    alert("Pedido realizado com sucesso!")
   }
   
   function esvaziarCarrinho(){
